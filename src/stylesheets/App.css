@@ -17,6 +17,37 @@ img {
   max-width: 100%;
   height: auto; }
 
+.logo-container {
+  position: fixed;
+  top: 0px;
+  left: 15%;
+  height: 75px;
+  width: 75px;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .logo-container .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F26C52;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    padding: 10px; }
+    .logo-container .logo:hover {
+      background-color: #52FFBB;
+      cursor: pointer; }
+    .logo-container .logo h1 {
+      font-size: 30px; }
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+
 nav {
   position: sticky;
   top: 0;
@@ -38,8 +69,7 @@ nav {
   font-size: 24px;
   text-decoration: none; }
   .nav-link a:hover {
-    cursor: pointer;
-    color: #FFFFFF; }
+    cursor: pointer; }
 
 .hero-container {
   margin-top: -75px;
@@ -66,9 +96,9 @@ nav {
   width: 100%;
   background: #F0F2F0;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(130deg, #F26C52, #202020);
+  background: -webkit-linear-gradient(130deg, #682b25, #202020);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(130deg, #F26C52, #202020);
+  background: linear-gradient(130deg, #682b25, #202020);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: .7;
   z-index: 1; }
@@ -132,13 +162,12 @@ p, a {
   font-family: "Exo", sans-serif;
   font-weight: 100;
   font-size: 24px;
-  color: #8F8F8F; }
+  color: #a3a1a1; }
 
 a {
-  text-decoration: none;
-  color: #8F8F8F; }
+  text-decoration: none; }
   a:hover {
-    color: #F66658;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #52FFBB; }
 
 /*# sourceMappingURL=App.css.map */

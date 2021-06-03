@@ -1,5 +1,6 @@
 @import "reset";
 @import "vars";
+@import "logo";
 @import "nav";
 @import "hero";
 @import "about";
@@ -27,10 +28,9 @@ p, a {
 
 a {
   text-decoration: none;
-  color: $gray;
 
   &:hover {
-    color: $dark-orange;
     cursor: pointer;
+    color: $teal;
   }
 }
