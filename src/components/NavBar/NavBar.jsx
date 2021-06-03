@@ -14,12 +14,12 @@ const inFrontOfDark = () => {
 
 const NavBar = props => {
   const [prevScrollPos, setPrevScrollPos] = useState(0)
-  const [lightNav, setLightNav] = useState(inFrontOfDark())
+  const [darkNav, setDarkNav] = useState(inFrontOfDark())
   const [visible, setVisible] = useState(true);
 
 
   useEffect(() => {
-    return () => setLightNav(inFrontOfDark())
+    return () => setDarkNav(inFrontOfDark())
   }, [props])
   
   useEffect(() => {
@@ -42,7 +42,7 @@ const NavBar = props => {
       )
 
       setTimeout(() => {
-        setLightNav(inFrontOfDark())
+        setDarkNav(inFrontOfDark())
       }, 1000);
       setPrevScrollPos(curScrollPos)
     }
@@ -62,9 +62,9 @@ const NavBar = props => {
     zIndex: '3',
     transition: 'top 0.3s, background-color 0.3s, box-shadow 0.3s',
     top: visible ? '0px' : '-100px',
-    backgroundColor: lightNav ? '#000C40' : 'transparent',
-    borderBottom: lightNav ? '1px solid #ffffff' : 'none',
-    boxShadow: lightNav ? '0px 1px 10px #000000' : 'none'
+    backgroundColor: darkNav ? '#202020' : 'transparent',
+    borderBottom: darkNav ? '1px solid #ffffff' : 'none',
+    boxShadow: darkNav ? '0px 1px 10px #202020' : 'none'
   }
 
   const SessionLinks = () => {

@@ -117,18 +117,21 @@ nav {
       flex-shrink: 4; }
 
 h1 {
-  font: 900px "Exo", sans-serif;
+  font-family: "Exo", sans-serif;
+  font-weight: 900;
   font-size: 64px;
   color: #FFFFFF; }
 
 h2 {
-  font: 100px "Exo", sans-serif;
+  font-family: "Exo", sans-serif;
+  font-weight: 900;
   font-size: 30px;
   color: #FFFFFF; }
 
 p, a {
+  font-family: "Exo", sans-serif;
+  font-weight: 100;
   font-size: 24px;
-  font: 100px "Exo", sans-serif;
   color: #8F8F8F; }
 
 a {

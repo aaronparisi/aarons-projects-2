@@ -5,20 +5,23 @@
 @import "about";
 
 h1 {
-  font: $font-fam-header;
+  font-family: $font-fam-header;
+  font-weight: 900;
   font-size: $font-size-large;
   color: $white;
 }
 
 h2 {
-  font: $font-fam-text;
+  font-family: $font-fam-text;
+  font-weight: 900;
   font-size: $font-size-medium;
   color: $white;
 }
 
 p, a {
+  font-family: $font-fam-text;
+  font-weight: 100;
   font-size: $font-size-small;
-  font: $font-fam-text;
   color: $gray;
 }
 
