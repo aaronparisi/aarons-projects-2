@@ -2,7 +2,7 @@
 
 .hero-container {
   margin-top: -($nav-height);
-  height: 100vh;
+  height: calc(100vh + 75px);
   width: 100vw;
 }
 
@@ -60,7 +60,7 @@
 
   h1 {
     color: $white;
-    font-size: $large-font;
+    font-size: $font-size-large;
     text-align: center;
     margin-bottom: 5%;
   }

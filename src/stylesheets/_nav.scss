@@ -10,6 +10,7 @@ nav {
   justify-content: center;
   align-items: center;
   height: $nav-height;
+  width: 100%;
 }
 
 .nav-links {
@@ -19,10 +20,9 @@ nav {
 }
 
 .nav-link a {
+  font-size: $font-size-small;
   text-decoration: none;
   color: $off-white;
-  font-size: $med-font;
-  font-family: 'Roboto', sans-serif;
   
   &:hover {
     cursor: pointer;

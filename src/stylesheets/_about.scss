@@ -1,5 +1,44 @@
 @import "vars";
 
 .about {
-  
+  background: #F0F2F0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(130deg,$dull-white,$dark-blue);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(348deg,$light-blue, $dark-blue); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: $white;
+
+  padding: 135px 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .about-header {
+    width: 75%;
+
+    h2: {
+      font-size: $font-size-small;
+    }
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+
+    .about-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      flex-basis: 100%;
+      margin-right: 150px;
+      flex-shrink: 1;
+    }
+
+    .headshot-container {
+      flex-basis: 100%;
+      flex-shrink: 4;
+    }
+  }
 }
