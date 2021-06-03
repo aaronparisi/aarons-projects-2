@@ -36,11 +36,10 @@ nav {
 
 .nav-link a {
   font-size: 24px;
-  text-decoration: none;
-  color: #cccccc; }
+  text-decoration: none; }
   .nav-link a:hover {
     cursor: pointer;
-    color: #ffffff; }
+    color: #FFFFFF; }
 
 .hero-container {
   margin-top: -75px;
@@ -67,9 +66,9 @@ nav {
   width: 100%;
   background: #F0F2F0;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(130deg, #848484, #000C40);
+  background: -webkit-linear-gradient(130deg, #F26C52, #202020);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(130deg, #848484, #000C40);
+  background: linear-gradient(130deg, #F26C52, #202020);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: .7;
   z-index: 1; }
@@ -86,19 +85,15 @@ nav {
   align-items: center;
   justify-content: center; }
   .hero-text h1 {
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 64px;
     text-align: center;
     margin-bottom: 5%; }
 
 .about {
-  background: #F0F2F0;
+  background: #202020;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(130deg, #848484, #000C40);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(348deg, #303a6e, #000C40);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: #ffffff;
+  color: #FFFFFF;
   padding: 135px 50px;
   display: flex;
   flex-direction: column;
@@ -122,23 +117,25 @@ nav {
       flex-shrink: 4; }
 
 h1 {
-  font-family: "Rajdhani", serif;
-  font-size: 64px; }
+  font: 900px "Exo", sans-serif;
+  font-size: 64px;
+  color: #FFFFFF; }
 
 h2 {
-  font-family: "Titillium Web", serif;
+  font: 100px "Exo", sans-serif;
   font-size: 30px;
-  color: #cccccc; }
+  color: #FFFFFF; }
 
 p, a {
   font-size: 24px;
-  font-family: "Titillium Web", sans-serif; }
+  font: 100px "Exo", sans-serif;
+  color: #8F8F8F; }
 
 a {
   text-decoration: none;
-  color: #ffd000; }
+  color: #8F8F8F; }
   a:hover {
-    color: #ffe881;
+    color: #F66658;
     cursor: pointer; }
 
 /*# sourceMappingURL=App.css.map */

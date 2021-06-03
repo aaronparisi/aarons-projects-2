@@ -5,27 +5,29 @@
 @import "about";
 
 h1 {
-  font-family: $font-fam-header, serif;
+  font: $font-fam-header;
   font-size: $font-size-large;
+  color: $white;
 }
 
 h2 {
-  font-family: $font-fam-text, serif;
+  font: $font-fam-text;
   font-size: $font-size-medium;
-  color: $off-white;
+  color: $white;
 }
 
 p, a {
   font-size: $font-size-small;
-  font-family: $font-fam-text, sans-serif;
+  font: $font-fam-text;
+  color: $gray;
 }
 
 a {
   text-decoration: none;
-  color: $yellow;
+  color: $gray;
 
   &:hover {
-    color: $light-yellow;
+    color: $dark-orange;
     cursor: pointer;
   }
 }
