@@ -1,0 +1,31 @@
+@import "vars";
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  padding: 30px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: $nav-height;
+}
+
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: $off-white;
+  font-size: $med-font;
+  font-family: 'Roboto', sans-serif;
+  
+  &:hover {
+    cursor: pointer;
+    color: $white;
+  }
+}
