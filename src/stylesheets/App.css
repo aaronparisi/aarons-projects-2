@@ -32,7 +32,8 @@ img {
     justify-content: center;
     align-items: center;
     background-color: #F26C52;
-    border-radius: 5px;
+    box-shadow: 0px 0px 7px 1px #202020;
+    border-radius: 10px;
     height: 50px;
     width: 50px;
     padding: 10px; }
@@ -47,45 +48,63 @@ img {
       font-size: 30px; }
 
 .nav-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  position: fixed;
+  left: 0px;
   height: 100px;
-  position: relative; }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  background-color: #202020; }
 
 nav {
-  position: sticky;
-  top: 0;
-  z-index: 3;
-  padding: 30px 0px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  z-index: 3; }
+
+.border-blocker, .nav-link {
+  background-color: #202020; }
 
 .nav-links {
-  width: 50%;
+  flex-grow: 2;
+  height: 100%;
   display: flex;
-  justify-content: space-around; }
+  justify-content: center;
+  align-items: center; }
 
-.nav-link a {
+.border-blocker {
+  height: 100%;
+  flex-grow: 1; }
+
+.nav-link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
   font-size: 24px;
   text-decoration: none; }
-  .nav-link a:hover {
-    cursor: pointer; }
+  .nav-link:hover {
+    background-color: transparent;
+    cursor: pointer;
+    color: #FFFFFF; }
 
 .nav-border {
-  position: absolute;
-  bottom: -1px;
-  height: 1px;
-  background: linear-gradient(to right, #F26C52 50%, #52FFBB); }
+  height: 101px;
+  min-height: 101px;
+  margin-top: -100px;
+  background: linear-gradient(to right, #F26C52 30%, #52FFBB); }
 
 .hero-container {
   margin-top: -100px;
-  height: calc(100vh + 75px);
+  height: calc(100vh + 100px);
   width: 100vw; }
 
 .hero {

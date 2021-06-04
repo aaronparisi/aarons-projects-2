@@ -21,7 +21,7 @@ const NavBar = props => {
   const [borderVisible, setBorderVisible] = useState(shouldShow())
 
   const borderTransTime = 250
-  const barTransTime = 500
+  const barTransTime = 350
   
   useEffect(() => {
     let isScrolling;
@@ -64,17 +64,10 @@ const NavBar = props => {
 
   const barVisibleTransStyle = `top ${barTransTime / 1000}s ease-in, background-color ${barTransTime / 1000}s ease-in`
   const barNotVisibleTransStyle = `top ${barTransTime / 1000}s ease-out, background-color ${barTransTime / 1000}s ease-out`
-  
+
   const navBarStyles = {
-    position: 'fixed',
-    left: '0px',
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    zIndex: '3',
     transition: barVisible ? barVisibleTransStyle : barNotVisibleTransStyle,
-    top: barVisible ? '0px' : '-100px',
-    backgroundColor: barVisible ? '#202020' : 'transparent'
+    top: barVisible ? '0px' : '-100px'
   }
 
   const navBorderStyles = {
@@ -115,19 +108,13 @@ const NavBar = props => {
   return (
     <div className="nav-container" style={{...navBarStyles}}>
       <nav>
-        <ul className="nav-links">
-          <li className="nav-link">
-            <a href="#about">About</a>
-          </li>
-          <li className="nav-link">
-            <a href="#projects">Projects</a>
-          </li>
-          <li className="nav-link">
-            <a href="#contact">Contact</a>
-          </li>
-
-          {/* <SessionLinks /> */}
-        </ul>
+        <div className="border-blocker"></div>
+        <div className="nav-links">
+          <a className="nav-link" href="#about">About</a>
+          <a className="nav-link" href="#projects">Projects</a>
+          <a className="nav-link" href="#contact">Contact</a>
+        </div>
+        <div className="border-blocker"></div>
       </nav>
       <div className="nav-border" style={{...navBorderStyles}}></div>
     </div>
