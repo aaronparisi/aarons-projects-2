@@ -3,7 +3,7 @@ import Headshot from "../../images/headshot.png"
 
 const About = props => {
   return (
-    <div className="about" id="about" data-dark={true}>
+    <div className="about" id="about" data-nav="show">
         <header className="about-header">
           <h1>Aaron Parisi</h1>
           <h2>I'm a web developer based in Seattle, WA,</h2>

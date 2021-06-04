@@ -2,25 +2,26 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { debounce } from '../../utils/helpers';
 
-const inFrontOfDark = () => {
-  const ele = document.elementFromPoint(0,75)
-  
-  if (ele.dataset.dark === undefined) {
-    return false
+// import styleVars from '../../stylesheets/_vars.scss'
+// todo figure out how to import scss vars
+
+const shouldShow = () => {
+  const navCoverEle = document.elementFromPoint(0,101)
+  if (navCoverEle.dataset.nav === "show") {
+    return true
   } else {
-    return ele.dataset.dark === "true"
+    return false
   }
 }
 
 const NavBar = props => {
-  const [prevScrollPos, setPrevScrollPos] = useState(0)
-  const [darkNav, setDarkNav] = useState(inFrontOfDark())
-  const [visible, setVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset)
+  const [curScrollPos, setCurScrollPos] = useState(window.pageYOffset)
+  const [barVisible, setBarVisible] = useState(shouldShow());
+  const [borderVisible, setBorderVisible] = useState(shouldShow())
 
-
-  useEffect(() => {
-    return () => setDarkNav(inFrontOfDark())
-  }, [props])
+  const borderTransTime = 250
+  const barTransTime = 500
   
   useEffect(() => {
     let isScrolling;
@@ -34,41 +35,55 @@ const NavBar = props => {
     }, 250)
 
     const adjustState = () => {
-      const curScrollPos = window.pageYOffset
-  
-      setVisible(  // scrolling UP or at top
-        (prevScrollPos > curScrollPos) ||
-        curScrollPos < 10
-      )
+      setCurScrollPos(window.pageYOffset)
 
-      setTimeout(() => {
-        setDarkNav(inFrontOfDark())
-      }, 1000);
+      // setBarVisible(shouldShow())
+      if (shouldShow()) {
+        // showing bar, border goes AFTER bar
+        setBarVisible(true)
+        
+        setTimeout(() => {
+          setBorderVisible(true)
+        }, barTransTime * .9);
+      } else {
+        // retracting bar, border goes BEFORE bar
+        setBorderVisible(false)
+
+        setTimeout(() => {
+          setBarVisible(false)
+        }, borderTransTime / 2);
+      }
+
       setPrevScrollPos(curScrollPos)
     }
 
     window.addEventListener('scroll', handleScroll)
 
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [prevScrollPos, visible])
+  }, [prevScrollPos])
 
+  const barVisibleTransStyle = `top ${barTransTime / 1000}s ease-in, background-color ${barTransTime / 1000}s ease-in`
+  const barNotVisibleTransStyle = `top ${barTransTime / 1000}s ease-out, background-color ${barTransTime / 1000}s ease-out`
+  
   const navBarStyles = {
     position: 'fixed',
     left: '0px',
-    height: '75px',
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
     zIndex: '3',
-    transition: 'top 0.3s, background-color 0.3s, box-shadow 0.3s',
-    top: visible ? '0px' : '-100px',
-    backgroundColor: darkNav ? '#202020' : 'transparent',
-    borderBottom: darkNav ? '1px solid #ffffff' : 'none',
-    boxShadow: darkNav ? '0px 1px 10px #202020' : 'none'
+    transition: barVisible ? barVisibleTransStyle : barNotVisibleTransStyle,
+    top: barVisible ? '0px' : '-100px',
+    backgroundColor: barVisible ? '#202020' : 'transparent'
+  }
+
+  const navBorderStyles = {
+    width: borderVisible ? '100%' : '0%',
+    transition: `width ${borderTransTime / 1000}s ease-out`
   }
 
   const SessionLinks = () => {
-    // debugger
+    
     if (props.currentUser !== null) {
       return (
         <React.Fragment >
@@ -114,6 +129,7 @@ const NavBar = props => {
           {/* <SessionLinks /> */}
         </ul>
       </nav>
+      <div className="nav-border" style={{...navBorderStyles}}></div>
     </div>
   )
 }

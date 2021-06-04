@@ -4,9 +4,9 @@ const Logo = () => {
 
   return (
     <div className="logo-container">
-      <div className="logo">
+      <a className="logo" href="#root">
         <h1>A.</h1>
-      </div>
+      </a>
     </div>
   )
 }

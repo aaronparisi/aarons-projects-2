@@ -5,6 +5,10 @@
 @import "hero";
 @import "about";
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-family: $font-fam-header;
   font-weight: 900;
@@ -23,7 +27,7 @@ p, a {
   font-family: $font-fam-text;
   font-weight: 100;
   font-size: $font-size-small;
-  color: $gray;
+  color: $light-gray;
 }
 
 a {
@@ -31,6 +35,6 @@ a {
 
   &:hover {
     cursor: pointer;
-    color: $teal;
+    color: $orange;
   }
 }

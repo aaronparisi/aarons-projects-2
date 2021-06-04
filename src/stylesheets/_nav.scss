@@ -5,6 +5,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  height: $nav-height;
+
+  position: relative;
 }
 
 nav {
@@ -16,7 +19,7 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: $nav-height;
+  height: 100%;
   width: 100%;
 }
 
@@ -33,4 +36,11 @@ nav {
   &:hover {
     cursor: pointer;
   }
+}
+
+.nav-border {
+  position: absolute;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(to right, $orange 50%, $teal);
 }
