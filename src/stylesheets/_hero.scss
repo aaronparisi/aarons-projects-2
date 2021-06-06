@@ -1,16 +1,11 @@
 @import "vars";
 
-.hero-container {
+.hero {
   margin-top: -($nav-height);
   height: calc(100vh + 100px);
   width: 100vw;
-}
-
-.hero {
-  height: 100%;
-  z-index: -1;
   position: relative;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   img {
     height: 100%;
@@ -30,11 +25,6 @@
   left: 0px;
   height: 100%;
   width: 100%;
-  // background: linear-gradient(120deg, #eaee44, #33d0ff);
-
-  // background: #20002c;  /* fallback for old browsers */
-  // background: -webkit-linear-gradient(120deg, #5b4d61, #1f002b);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(120deg, #5b4d61, #1f002b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   background: #F0F2F0;  /* fallback for old browsers */
   background: -webkit-linear-gradient(130deg,$dark-orange, $black);  /* Chrome 10-25, Safari 5.1-6 */
@@ -62,5 +52,25 @@
     text-shadow: 1px 1px 0px $teal;
     text-align: center;
     margin-bottom: 5%;
+  }
+
+  .scroll-btn-container {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & a {
+      font-size: $font-size-large;
+      color: $white;
+      text-shadow: 1px 1px 0px $teal;
+      margin-bottom: 0px;
+      transition: margin-bottom .5s ease-in;
+
+      &:hover {
+        color: $orange;
+      }
+    }
   }
 }

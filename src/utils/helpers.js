@@ -12,6 +12,7 @@ export function debounce(func, wait, immediate) {
     }
 
     let callNow = immediate && !timeout;
+
     clearTimeout(timeout)
     timeout = setTimeout(later, wait)
 

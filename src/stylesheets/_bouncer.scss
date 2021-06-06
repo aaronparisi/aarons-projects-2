@@ -1,0 +1,7 @@
+@import "vars";
+
+.bounced {
+  margin-bottom: 30px !important;
+  // font-size: $font-size-large !important;
+  transition: margin-bottom 1s ease-out !important;
+}
