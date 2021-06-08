@@ -53,24 +53,4 @@
     text-align: center;
     margin-bottom: 5%;
   }
-
-  .scroll-btn-container {
-    position: absolute;
-    bottom: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    & a {
-      font-size: $font-size-large;
-      color: $white;
-      text-shadow: 1px 1px 0px $teal;
-      margin-bottom: 0px;
-      transition: margin-bottom .5s ease-in;
-
-      &:hover {
-        color: $orange;
-      }
-    }
-  }
 }

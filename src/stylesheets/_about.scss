@@ -1,6 +1,7 @@
 @import "vars";
 
 $blurb-height: 200px;
+$intro-text-height: 40vh;
 
 .about {
   background: $black; /* fallback for old browsers */
@@ -14,19 +15,21 @@ $blurb-height: 200px;
   color: $white;
 
   padding: 0px 50px;
-  padding-top: 15%;
+  padding-top: 12%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  position: relative;
 
   .about-intro {
     display: flex;
     flex-direction: row;
     justify-content: stretch;
     align-items: stretch;
-    height: 50vh;
-    max-height: 50vh;
+    height: $intro-text-height;
+    max-height: $intro-text-height;
     margin-bottom: 5%;
 
     z-index: 3;
@@ -39,6 +42,10 @@ $blurb-height: 200px;
       flex-direction: column;
       justify-content: space-around;
       // padding-right: 8%;
+
+      & h1 {
+        text-shadow: 1px 1px 0px $teal;
+      }
 
       & h2 {
         color: $gray;
@@ -111,14 +118,14 @@ $blurb-height: 200px;
     .headshot-container {
       flex-basis: 50%;
       border-radius: 10px;
-      height: 50vh;
-      max-height: 50vh;
+      height: $intro-text-height;
+      max-height: $intro-text-height;
       display: flex;
       justify-content: flex-end;
   
       & img {
-        height: 50vh;
-        max-height: 50vh;
+        height: $intro-text-height;
+        max-height: $intro-text-height;
       }
     }
   }
@@ -242,5 +249,14 @@ $blurb-height: 200px;
       // }
       // * this creates the stagger using speed, rather than timing of start
     }
+  }
+
+  .about-footer {
+    z-index: 2;
+    margin-top: 4%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

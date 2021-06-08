@@ -10,7 +10,7 @@ const Home = props => {
       <div className="hero-text">
         <h1>Web applications even my parents could use.</h1>
         <div className="scroll-btn-container">
-          <a id="bouncer" href="#about">&or;</a>
+          <a className="bouncer" href="#about">&or;</a>
         </div>
       </div>
 

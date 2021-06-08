@@ -59,61 +59,68 @@ const About = props => {
 
   return (
     <div className="about" id="about" data-nav="show">
-        <div className="about-intro">
-          <div className="intro-text">
-            <h1>Aaron Parisi</h1>
-            <h2>
-              I'm a Seattle-based web-developer specializing in intuitive and attractive web applications built with React and Rails.
-            </h2>
-            <div className="intro-links-container">
-              {/* <div className="intro-links-gradient-background"></div> */}
-              <div className="intro-links-black-background">
-                <div className="intro-links">
-                  <a className="icon-link" rel="noreferrer" target="_blank" href="https://www.github.com/aaronparisi">
-                    <img className="icon" src={GitHub} alt="GitHub icon" />
-                  </a>
-                  <a className="icon-link" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/aaron-parisi">
-                    <img className="icon" src={LinkedIn} alt="LinkedIn Icon" />
-                  </a>
-                  <a className="icon-link" href="mailto:parisi.aaron@gmail.com">
-                    <img className="icon" src={Email} alt="email icon" />
-                  </a>
-                  <a className="icon-link" rel="noreferrer" target="_blank" href="../../pdfs/resume_parisi_aaron.pdf">
-                    <img className="icon" src={Resume} alt="resume icon" />
-                  </a>
-                </div>
+      <div className="about-intro">
+        <div className="intro-text">
+          <h1>Aaron Parisi</h1>
+          <h2>
+            I'm a Seattle-based web-developer specializing in intuitive and attractive web applications built with React and Rails.
+          </h2>
+          <div className="intro-links-container">
+            {/* <div className="intro-links-gradient-background"></div> */}
+            <div className="intro-links-black-background">
+              <div className="intro-links">
+                <a className="icon-link" rel="noreferrer" target="_blank" href="https://www.github.com/aaronparisi">
+                  <img className="icon" src={GitHub} alt="GitHub icon" />
+                </a>
+                <a className="icon-link" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/aaron-parisi">
+                  <img className="icon" src={LinkedIn} alt="LinkedIn Icon" />
+                </a>
+                <a className="icon-link" href="mailto:parisi.aaron@gmail.com">
+                  <img className="icon" src={Email} alt="email icon" />
+                </a>
+                <a className="icon-link" rel="noreferrer" target="_blank" href="../../pdfs/resume_parisi_aaron.pdf">
+                  <img className="icon" src={Resume} alt="resume icon" />
+                </a>
               </div>
             </div>
           </div>
-          <div className="headshot-container"><img id="headshot" src={Headshot} alt="Headshot of Aaron Parisi"/></div>
         </div>
+        <div className="headshot-container"><img id="headshot" src={Headshot} alt="Headshot of Aaron Parisi"/></div>
+      </div>
 
-        <div className="about-blurbs-container" ref={ref}>
-          <div className="about-blurbs-gradient"></div>
-          <div className="about-blurbs">
-            <StyledDiv margin={blurb1Margin} className="blurb-container">
-              <div className="blocker"></div>
-              <p>It started when I was teaching AP Calculus BC, Multivariable Calculus, and Statistics at <a href="https://www.salisburyschool.org/">Salisbury School</a> on a whiteboard.  It's hard enough explaining a vector integral without also having to hand-draw it...</p>
-              <div className="blocker"></div>
-            </StyledDiv>
+      <div className="about-blurbs-container" ref={ref}>
+        <div className="about-blurbs-gradient"></div>
+        <div className="about-blurbs">
+          <StyledDiv margin={blurb1Margin} className="blurb-container">
+            <div className="blocker"></div>
+            <p>It started when I was teaching AP Calculus BC, Multivariable Calculus, and Statistics at <a href="https://www.salisburyschool.org/">Salisbury School</a> on a whiteboard.  It's hard enough explaining a vector integral without also having to hand-draw it...</p>
+            <div className="blocker"></div>
+          </StyledDiv>
 
-            <div className="spacer"></div>
+          <div className="spacer"></div>
 
-            <StyledDiv margin={blurb2Margin} className="blurb-container">
-              <div className="blocker"></div>
-              <p>Then I worked a job at a <a href="https://www.1031services.com/">real estate exchange company</a> whose database software had some, er, quirks.  Imagine clicking 'like' on your friend's latest facebook photo, only to be unexpectedly taken to your old AIM account...</p>
-              <div className="blocker"></div>
-            </StyledDiv>
+          <StyledDiv margin={blurb2Margin} className="blurb-container">
+            <div className="blocker"></div>
+            <p>Then I worked a job at a <a href="https://www.1031services.com/">real estate exchange company</a> whose database software had some, er, quirks.  Imagine clicking 'like' on your friend's latest facebook photo, only to be unexpectedly taken to your old AIM account...</p>
+            <div className="blocker"></div>
+          </StyledDiv>
 
-            <div className="spacer"></div>
+          <div className="spacer"></div>
 
-            <StyledDiv margin={blurb3Margin} className="blurb-container">
-              <div className="blocker"></div>
-              <p>Finally it dawned on me - I really like making software that's easy to use, looks nice, and actually works.  With the help of <a href="https://open.appacademy.io/">App Academy Open</a>, I've been able to teach myself to do that.</p>
-              <div className="blocker"></div>
-            </StyledDiv>
-          </div>
+          <StyledDiv margin={blurb3Margin} className="blurb-container">
+            <div className="blocker"></div>
+            <p>Finally it dawned on me - I really like making software that's easy to use, looks nice, and actually works.  With the help of <a href="https://open.appacademy.io/">App Academy Open</a>, I've been able to teach myself to do that.</p>
+            <div className="blocker"></div>
+          </StyledDiv>
         </div>
+      </div>
+
+      <div className="about-footer">
+        <h2>Check out some of my projects!</h2>
+        <div className="scroll-btn-container">
+          <a className="bouncer" id="bouncer-about" href="#projects">&or;</a>
+        </div>
+      </div>
     </div>
   );
 }
