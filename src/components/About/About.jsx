@@ -51,7 +51,7 @@ const About = props => {
       }, 500);
 
       setTimeout(() => {
-        setFooterMargin('4%')
+        setFooterMargin('4vh')
       }, 750);
 
       setAnimated(true)
@@ -79,25 +79,20 @@ const About = props => {
           </h2>
         </div>
         <div className="headshot-container">
-          <img id="headshot" src={Headshot} alt="Headshot of Aaron Parisi"/>
-          <div className="intro-links-container">
-            {/* <div className="intro-links-gradient-background"></div> */}
-            <div className="intro-links-black-background">
-              <div className="intro-links">
-                <a className="icon-link" rel="noreferrer" target="_blank" href="https://www.github.com/aaronparisi">
-                  <img className="icon" src={GitHub} alt="GitHub icon" />
-                </a>
-                <a className="icon-link" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/aaron-parisi">
-                  <img className="icon" src={LinkedIn} alt="LinkedIn Icon" />
-                </a>
-                <a className="icon-link" href="mailto:parisi.aaron@gmail.com">
-                  <img className="icon" src={Email} alt="email icon" />
-                </a>
-                <a className="icon-link" rel="noreferrer" target="_blank" href="../../pdfs/resume_parisi_aaron.pdf">
-                  <img className="icon" src={Resume} alt="resume icon" />
-                </a>
-              </div>
-            </div>
+          <img class="headshot" id="headshot" src={Headshot} alt="Headshot of Aaron Parisi"/>
+          <div className="intro-links">
+            <a className="icon-link" rel="noreferrer" target="_blank" href="https://www.github.com/aaronparisi">
+              <img className="icon" src={GitHub} alt="GitHub icon" />
+            </a>
+            <a className="icon-link" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/aaron-parisi">
+              <img className="icon" src={LinkedIn} alt="LinkedIn Icon" />
+            </a>
+            <a className="icon-link" href="mailto:parisi.aaron@gmail.com">
+              <img className="icon" src={Email} alt="email icon" />
+            </a>
+            <a className="icon-link" rel="noreferrer" target="_blank" href="../../pdfs/resume_parisi_aaron.pdf">
+              <img className="icon" src={Resume} alt="resume icon" />
+            </a>
           </div>
         </div>
       </div>
@@ -132,7 +127,8 @@ const About = props => {
       <StyledDiv className="about-footer" margin={footerMargin} >
         <h2>Check out some of my projects!</h2>
         <div className="scroll-btn-container">
-          <a className="bouncer" id="bouncer-about" href="#projects">&or;</a>
+          {/* <a className="bouncer" id="bouncer-about" href="#projects">&or;</a> */}
+          <a id="bouncer-about" href="#projects">&or;</a>
         </div>
       </StyledDiv>
     </div>

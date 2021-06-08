@@ -38,12 +38,10 @@ img {
     width: 50px;
     padding: 10px; }
     .logo-container .logo h1 {
-      text-shadow: 1px 1px 0px #52FFBB; }
+      text-shadow: 1px 1px 0px #202020; }
     .logo-container .logo:hover {
       background-color: #52FFBB;
       cursor: pointer; }
-      .logo-container .logo:hover h1 {
-        text-shadow: 1px 1px 0px #F26C52; }
     .logo-container .logo h1 {
       font-size: 30px; }
 
@@ -109,6 +107,7 @@ nav {
   position: relative; }
   .hero img {
     height: 100%;
+    width: 100%;
     object-fit: cover; }
   .hero > * {
     z-index: 2; }
@@ -167,15 +166,16 @@ nav {
 .about {
   background: #202020;
   /* fallback for old browsers */
-  min-height: 100vh;
-  max-height: 100vh;
+  height: 100vh;
+  min-height: 700px;
   overflow-y: hidden;
   color: #FFFFFF;
   padding: 0px 50px;
-  padding-top: 12%;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: stretch;
   position: relative; }
   .about .about-intro {
     display: flex;
@@ -184,7 +184,8 @@ nav {
     align-items: stretch;
     height: 40vh;
     max-height: 40vh;
-    margin-bottom: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     z-index: 3; }
     .about .about-intro .intro-text {
       color: #a3a1a1;
@@ -192,71 +193,49 @@ nav {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      margin-right: 5%; }
+      margin-right: 10%; }
       .about .about-intro .intro-text h1 {
         text-shadow: 1px 1px 0px #52FFBB; }
       .about .about-intro .intro-text h2 {
         color: #a3a1a1; }
     .about .about-intro .headshot-container {
-      flex-basis: 40%;
       border-radius: 10px;
       height: 40vh;
-      max-height: 40vh;
-      display: flex;
-      justify-content: center;
+      width: 40vh;
       position: relative; }
-      .about .about-intro .headshot-container:hover .intro-links-container {
+      .about .about-intro .headshot-container:hover .intro-links {
         visibility: visible;
         background-color: #202020d7; }
-      .about .about-intro .headshot-container img {
-        height: 40vh;
-        max-height: 40vh; }
-      .about .about-intro .headshot-container .intro-links-container {
+      .about .about-intro .headshot-container .headshot {
         position: absolute;
         top: 0px;
         left: 0px;
-        height: 40vh;
+        height: 100%;
+        max-height: 100%;
+        width: 100%; }
+      .about .about-intro .headshot-container .intro-links {
+        visibility: hidden;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 100%;
         width: 100%;
-        background: #20202000;
-        visibility: hidden; }
-        .about .about-intro .headshot-container .intro-links-container .intro-links-black-background {
-          position: absolute;
-          top: 0px;
-          left: 0px;
-          height: 100%;
-          width: 100%;
-          z-index: 3;
+        padding: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch;
+        flex-wrap: wrap; }
+        .about .about-intro .headshot-container .intro-links .icon-link {
+          flex-basis: 50%;
           display: flex;
-          justify-content: stretch;
-          align-items: center;
-          padding: 0px 10px; }
-          .about .about-intro .headshot-container .intro-links-container .intro-links-black-background .intro-links {
-            flex-basis: 100%;
-            height: 100%;
-            max-height: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: stretch;
-            flex-wrap: wrap;
-            padding: 30%; }
-            .about .about-intro .headshot-container .intro-links-container .intro-links-black-background .intro-links .icon-link {
-              flex-basis: 50%;
-              display: flex;
-              justify-content: center;
-              align-items: center; }
-              .about .about-intro .headshot-container .intro-links-container .intro-links-black-background .intro-links .icon-link:hover {
-                background: none; }
-              .about .about-intro .headshot-container .intro-links-container .intro-links-black-background .intro-links .icon-link .icon {
-                height: 75%;
-                filter: invert(48%) sepia(85%) saturate(1832%) hue-rotate(332deg) brightness(109%) contrast(90%); }
-                .about .about-intro .headshot-container .intro-links-container .intro-links-black-background .intro-links .icon-link .icon:hover {
-                  filter: invert(87%) sepia(66%) saturate(477%) hue-rotate(75deg) brightness(100%) contrast(103%); }
-        .about .about-intro .headshot-container .intro-links-container .intro-links-gradient-background {
-          content: '';
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          background: linear-gradient(to right, #F26C52 30%, #52FFBB); }
+          justify-content: center;
+          align-items: center; }
+          .about .about-intro .headshot-container .intro-links .icon-link .icon {
+            height: 70%;
+            max-height: 150px;
+            filter: invert(48%) sepia(85%) saturate(1832%) hue-rotate(332deg) brightness(109%) contrast(90%); }
+            .about .about-intro .headshot-container .intro-links .icon-link .icon:hover {
+              filter: invert(87%) sepia(66%) saturate(477%) hue-rotate(75deg) brightness(100%) contrast(103%); }
   .about .about-blurbs-container {
     width: 100%;
     position: relative;
@@ -327,6 +306,8 @@ nav {
           border-radius: 30px;
           box-shadow: -9px 9px 0 0 #202020, -9px -9px 0 0 #202020, 9px 9px 0 0 #202020, 9px -9px 0 0 #202020; }
   .about .about-footer {
+    flex-basis: 1%;
+    flex-grow: 2;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -334,9 +315,14 @@ nav {
     justify-content: center;
     transition: margin-top .75s ease-out; }
     .about .about-footer .scroll-btn-container {
-      bottom: 22px; }
+      position: initial;
+      flex-direction: column-reverse; }
+      .about .about-footer .scroll-btn-container .bouncer {
+        transition: margin-top .5s ease-out;
+        margin-top: 30px; }
       .about .about-footer .scroll-btn-container .bounced {
-        margin-bottom: 10px !important; }
+        margin-top: 0px !important;
+        transition: margin-top 1s ease-in !important; }
       .about .about-footer .scroll-btn-container a {
         line-height: .5; }
 
@@ -420,6 +406,7 @@ nav {
 
 .contact {
   height: 100vh;
+  min-height: 850px;
   padding-top: 100px;
   background-color: #202020;
   display: flex;

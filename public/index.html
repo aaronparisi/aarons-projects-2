@@ -18,6 +18,25 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyB14SMZfbH4JmX22pNrPLS8g8VOcusg1Oo",
+        authDomain: "aarons-projects-2c834.firebaseapp.com",
+        projectId: "aarons-projects-2c834",
+        storageBucket: "aarons-projects-2c834.appspot.com",
+        messagingSenderId: "518188558035",
+        appId: "1:518188558035:web:c663faf71eb861770e5626"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./bouncer.js"></script>
     <script src="./blinking_cursor.js"></script>

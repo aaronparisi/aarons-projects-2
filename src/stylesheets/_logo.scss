@@ -27,16 +27,12 @@
     padding: 10px;
 
     h1 {
-      text-shadow: 1px 1px 0px $teal;
+      text-shadow: 1px 1px 0px $black;
     }
 
     &:hover {
       background-color: $teal;
       cursor: pointer;
-
-      h1 {
-        text-shadow: 1px 1px 0px $orange;
-      }
     }
   
     h1 {
