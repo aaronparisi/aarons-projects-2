@@ -1,0 +1,13 @@
+@import 'vars';
+
+#blinking-cursor {
+  visibility: visible;
+  
+  font-weight: 100;
+  font-size: $font-size-large;
+  color: $teal;
+}
+
+.blinked-off {
+  visibility: hidden !important;
+}

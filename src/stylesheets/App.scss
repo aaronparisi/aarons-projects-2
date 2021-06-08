@@ -5,6 +5,9 @@
 @import "hero";
 @import "bouncer";
 @import "about";
+@import "projects";
+@import "blinking_cursor";
+@import "contact";
 
 html {
   scroll-behavior: smooth;
@@ -15,6 +18,7 @@ h1 {
   font-weight: 900;
   font-size: $font-size-large;
   color: $white;
+  text-shadow: 1px 1px 0px $teal;
 }
 
 h2 {
@@ -38,4 +42,10 @@ a {
     cursor: pointer;
     color: $orange;
   }
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

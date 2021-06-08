@@ -207,7 +207,7 @@ nav {
       position: relative; }
       .about .about-intro .headshot-container:hover .intro-links-container {
         visibility: visible;
-        background-color: #202020c9; }
+        background-color: #202020d7; }
       .about .about-intro .headshot-container img {
         height: 40vh;
         max-height: 40vh; }
@@ -331,11 +331,148 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    justify-content: center;
     transition: margin-top .75s ease-out; }
     .about .about-footer .scroll-btn-container {
+      bottom: 22px; }
+      .about .about-footer .scroll-btn-container .bounced {
+        margin-bottom: 10px !important; }
+      .about .about-footer .scroll-btn-container a {
+        line-height: .5; }
+
+.projects {
+  background-color: #202020;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch; }
+  .projects .blank-tile {
+    flex-basis: 33.33%;
+    background-color: #302E30;
+    color: #52FFBB;
+    font-family: "Fira Code", monospace;
+    padding: 3%; }
+    .projects .blank-tile .terminal-text {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+  .projects .project-tile {
+    flex-basis: 33.33%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .projects .project-tile:hover img {
+      filter: blur(5px); }
+    .projects .project-tile:hover .tile-overlay {
+      visibility: visible; }
+    .projects .project-tile .project-tile {
+      height: 100%;
+      width: 100%; }
+    .projects .project-tile .tile-overlay {
+      visibility: hidden;
+      background-color: #202020d7;
       position: absolute;
-      bottom: -225%; }
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 5%; }
+      .projects .project-tile .tile-overlay h2 {
+        text-align: center; }
+      .projects .project-tile .tile-overlay p {
+        font-size: 20px; }
+      .projects .project-tile .tile-overlay .techs {
+        font-family: "Fira Code", monospace;
+        font-size: 16px;
+        color: #3aaf80; }
+      .projects .project-tile .tile-overlay .tile-links {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end; }
+        .projects .project-tile .tile-overlay .tile-links a {
+          display: flex;
+          flex-direction: row;
+          align-items: center; }
+          .projects .project-tile .tile-overlay .tile-links a .icon {
+            height: 35px;
+            filter: invert(48%) sepia(85%) saturate(1832%) hue-rotate(332deg) brightness(109%) contrast(90%); }
+            .projects .project-tile .tile-overlay .tile-links a .icon:hover {
+              filter: invert(87%) sepia(66%) saturate(477%) hue-rotate(75deg) brightness(100%) contrast(103%); }
+
+#blinking-cursor {
+  visibility: visible;
+  font-weight: 100;
+  font-size: 64px;
+  color: #52FFBB; }
+
+.blinked-off {
+  visibility: hidden !important; }
+
+.contact {
+  height: 100vh;
+  padding-top: 100px;
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .contact form {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px; }
+    .contact form input[type="text"], .contact form input[type="email"], .contact form textarea {
+      box-sizing: border-box;
+      font-family: "Fira Code", monospace;
+      font-size: 20px;
+      width: 100%;
+      padding: 20px 25px;
+      margin: 10px 0px;
+      border-radius: 40px;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      background-color: #302E30; }
+      .contact form input[type="text"]::placeholder, .contact form input[type="email"]::placeholder, .contact form textarea::placeholder {
+        color: #d1d0d0; }
+      .contact form input[type="text"]:hover, .contact form input[type="email"]:hover, .contact form textarea:hover {
+        background-color: #a3a1a1; }
+      .contact form input[type="text"]:focus, .contact form input[type="email"]:focus, .contact form textarea:focus {
+        background-color: #52FFBB !important;
+        border: none;
+        outline: none;
+        box-shadow: none; }
+        .contact form input[type="text"]:focus::placeholder, .contact form input[type="email"]:focus::placeholder, .contact form textarea:focus::placeholder {
+          visibility: hidden; }
+    .contact form button {
+      background-color: #F26C52;
+      color: #FFFFFF;
+      padding: 20px 25px;
+      margin-top: 10px;
+      border: none;
+      box-shadow: none;
+      border-radius: 15px; }
+      .contact form button h2 {
+        text-shadow: 1px 1px 0px #202020; }
+      .contact form button:hover {
+        cursor: pointer;
+        background-color: #52FFBB; }
+      .contact form button:disabled {
+        background-color: #302E30;
+        cursor: default; }
+        .contact form button:disabled h2 {
+          color: #222222; }
 
 html {
   scroll-behavior: smooth; }
@@ -344,7 +481,8 @@ h1 {
   font-family: "Exo", sans-serif;
   font-weight: 900;
   font-size: 64px;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  text-shadow: 1px 1px 0px #52FFBB; }
 
 h2 {
   font-family: "Exo", sans-serif;
@@ -363,5 +501,10 @@ a {
   a:hover {
     cursor: pointer;
     color: #F26C52; }
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 /*# sourceMappingURL=App.css.map */

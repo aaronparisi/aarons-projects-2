@@ -25,12 +25,15 @@ const About = props => {
   const [blurb3Margin, setBlurb3Margin] = useState('500px')
 
   const [footerMargin, setFooterMargin] = useState('500px')
+  const [animated, setAnimated] = useState(false)
 
   const [ref, entry] = useOnScreen({
     
   })
 
   useEffect(() => {
+    if (animated) return;
+
     if (entry.intersectionRatio > 0) {
       // * this makes them hit the top at the same time
       setBlurb1Margin('0px')
@@ -50,6 +53,8 @@ const About = props => {
       setTimeout(() => {
         setFooterMargin('4%')
       }, 750);
+
+      setAnimated(true)
     } else {
       // * ... for hitting the top at the same time
       // setBlurb1Margin('250px')

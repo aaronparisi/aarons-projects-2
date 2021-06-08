@@ -1,0 +1,87 @@
+@import "vars";
+
+.contact {
+  height: 100vh;
+  padding-top: $nav-height;
+  background-color: $black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & form {
+    width: 75%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  
+    input[type="text"], input[type="email"], textarea {
+      box-sizing: border-box;
+  
+      font-family: $font-fam-code;
+      font-size: $font-size-med-small;
+  
+      width: 100%;
+      padding: 20px 25px;
+      margin: 10px 0px;
+  
+      border-radius: 40px;
+  
+      border: none;
+      outline: none;
+      box-shadow: none;
+
+      background-color: $med-dark-gray;
+  
+      &::placeholder {
+        color: $light-gray;
+      }
+  
+      &:hover {
+        background-color: $gray;
+      }
+  
+      &:focus {
+        background-color: $teal !important;
+        border: none;
+        outline: none;
+        box-shadow: none;
+  
+        &::placeholder {
+          visibility: hidden;
+        }
+      }
+    }
+  
+    button {
+      background-color: $orange;
+      color: $white;
+      padding: 20px 25px;
+      margin-top: 10px;
+
+      border: none;
+      box-shadow: none;
+
+      border-radius: 15px;
+      & h2 {
+        text-shadow: 1px 1px 0px $black;
+      }
+  
+      &:hover {
+        cursor: pointer;
+        background-color: $teal;
+      }
+  
+      &:disabled {
+        background-color: $med-dark-gray;
+        & h2 {
+          color: $dark-gray;
+        }
+        cursor: default;
+      }
+    }
+  }
+}

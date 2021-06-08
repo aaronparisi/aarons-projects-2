@@ -2,12 +2,22 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { debounce } from '../../utils/helpers';
 
-// import styleVars from '../../stylesheets/_vars.scss'
-// todo figure out how to import scss vars
+const coveringShow = (ele) => {
+  if (ele.dataset !== undefined && ele.dataset.nav !== undefined) {
+    // we have an element with a dataset with a nav property!
+    return ele.dataset.nav === "show"
+  } else if (ele.parentNode.dataset !== undefined) {
+    // checking parent element (e.g. for thumbnails)
+    return ele.parentNode.dataset.nav === "show"
+  } else {
+    return false
+  }
+}
 
 const shouldShow = () => {
   const navCoverEle = document.elementFromPoint(0,101)
-  if (navCoverEle.dataset.nav === "show") {
+
+  if (coveringShow(navCoverEle)) {
     return true
   } else {
     return false
