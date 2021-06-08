@@ -1,3 +1,5 @@
+import { useState, useEffect, useRef } from 'react'
+
 export function debounce(func, wait, immediate) {
   let timeout;
 
@@ -20,4 +22,27 @@ export function debounce(func, wait, immediate) {
       func.apply(context, args)
     }
   }
+}
+
+export function useOnScreen({ root = null}) {
+  const [entry, updateEntry] = useState({})
+  const [node, setNode] = useState(null)
+
+  const observer = useRef(null)
+
+  useEffect(() => {
+    if (observer.current) observer.current.disconnect()
+
+    observer.current = new IntersectionObserver(
+      ([entry]) => updateEntry(entry)
+    )
+    const { current: currentObserver } = observer;
+
+    if (node) currentObserver.observe(node)
+    
+    // Remove the observer as soon as the component is unmounted
+    return () => currentObserver.disconnect()
+  }, [node])
+
+  return [setNode, entry]
 }

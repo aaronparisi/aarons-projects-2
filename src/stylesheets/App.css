@@ -56,7 +56,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  z-index: 4;
   background-color: #202020; }
 
 nav {
@@ -122,9 +122,9 @@ nav {
   width: 100%;
   background: #F0F2F0;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(130deg, #682b25, #202020);
+  background: -webkit-linear-gradient(130deg, #4b1f1b, #202020);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(130deg, #682b25, #202020);
+  background: linear-gradient(130deg, #4b1f1b, #202020);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: .7;
   z-index: 1; }
@@ -166,33 +166,149 @@ nav {
 .about {
   background: #202020;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(130deg, #202020 50%, #351613);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(130deg, #202020 50%, #351613);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
   color: #FFFFFF;
   padding: 135px 50px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; }
-  .about .about-header {
-    width: 75%;
-    h2-font-size: 24px; }
-  .about .about-content {
+  align-items: center; }
+  .about .about-intro {
     display: flex;
     flex-direction: row;
-    justify-content: stretch; }
-    .about .about-content .about-text {
+    justify-content: stretch;
+    align-items: stretch;
+    height: 50vh;
+    max-height: 50vh;
+    margin-bottom: 5%;
+    z-index: 3; }
+    .about .about-intro .intro-text {
+      color: #a3a1a1;
+      flex-basis: 50%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      flex-basis: 100%;
-      margin-right: 150px;
-      flex-shrink: 1; }
-    .about .about-content .headshot-container {
-      flex-basis: 100%;
-      flex-shrink: 4; }
+      justify-content: space-around; }
+      .about .about-intro .intro-text h2 {
+        color: #a3a1a1; }
+      .about .about-intro .intro-text .intro-links-container {
+        position: relative;
+        z-index: 2;
+        height: 75px; }
+        .about .about-intro .intro-text .intro-links-container .intro-links-black-background {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          height: 100%;
+          width: 100%;
+          background: #202020;
+          z-index: 3;
+          display: flex;
+          justify-content: stretch;
+          align-items: center;
+          padding: 0px 10px; }
+          .about .about-intro .intro-text .intro-links-container .intro-links-black-background .intro-links {
+            flex-basis: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1px; }
+            .about .about-intro .intro-text .intro-links-container .intro-links-black-background .intro-links .icon-link {
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              .about .about-intro .intro-text .intro-links-container .intro-links-black-background .intro-links .icon-link:hover {
+                background: none; }
+              .about .about-intro .intro-text .intro-links-container .intro-links-black-background .intro-links .icon-link .icon {
+                filter: invert(48%) sepia(85%) saturate(1832%) hue-rotate(332deg) brightness(109%) contrast(90%); }
+                .about .about-intro .intro-text .intro-links-container .intro-links-black-background .intro-links .icon-link .icon:hover {
+                  filter: invert(87%) sepia(66%) saturate(477%) hue-rotate(75deg) brightness(100%) contrast(103%); }
+        .about .about-intro .intro-text .intro-links-container .intro-links-gradient-background {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(to right, #F26C52 30%, #52FFBB); }
+    .about .about-intro .headshot-container {
+      flex-basis: 50%;
+      border-radius: 10px;
+      height: 50vh;
+      max-height: 50vh;
+      display: flex;
+      justify-content: flex-end; }
+      .about .about-intro .headshot-container img {
+        height: 50vh;
+        max-height: 50vh; }
+  .about .about-blurbs-container {
+    width: 100%;
+    position: relative;
+    z-index: 2; }
+    .about .about-blurbs-container .about-blurbs-gradient {
+      z-index: -2;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      background: linear-gradient(to right, #4b1f1b 25%, #164432); }
+    .about .about-blurbs-container .about-blurbs {
+      display: flex;
+      flex-direction: row;
+      justify-content: stretch; }
+      .about .about-blurbs-container .about-blurbs .spacer {
+        background: #202020;
+        flex-basis: 2%; }
+      .about .about-blurbs-container .about-blurbs .blurb-container {
+        position: relative;
+        transition: margin-top 2s ease-out;
+        height: 155px;
+        flex-basis: 33.33%;
+        border-radius: 10px; }
+        .about .about-blurbs-container .about-blurbs .blurb-container p {
+          text-align: left;
+          padding: 15px;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          font-size: 16px;
+          color: #FFFFFF; }
+          .about .about-blurbs-container .about-blurbs .blurb-container p a {
+            font-size: 16px;
+            color: #FFFFFF;
+            font-weight: 300; }
+            .about .about-blurbs-container .about-blurbs .blurb-container p a:hover {
+              cursor: pointer;
+              text-decoration: underline; }
+        .about .about-blurbs-container .about-blurbs .blurb-container .blocker:nth-child(1) {
+          content: "";
+          z-index: -1;
+          width: 100%;
+          height: 3000px;
+          background-color: #202020;
+          position: absolute;
+          top: -3000px;
+          left: 0px; }
+        .about .about-blurbs-container .about-blurbs .blurb-container .blocker:nth-child(3) {
+          content: "";
+          z-index: -1;
+          width: 100%;
+          height: 3000px;
+          background-color: #202020;
+          position: absolute;
+          top: 155px;
+          left: 0px; }
+        .about .about-blurbs-container .about-blurbs .blurb-container::after {
+          z-index: -1;
+          content: "";
+          height: 100%;
+          width: 100%;
+          background-color: transparent;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          border-radius: 10px;
+          box-shadow: -9px 0px 0 0 #202020, 9px 0px 0 0 #202020; }
 
 html {
   scroll-behavior: smooth; }

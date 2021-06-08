@@ -2,10 +2,12 @@
 
 .about {
   background: $black; /* fallback for old browsers */
-  background: -webkit-linear-gradient(130deg, $black 50%, $darker-orange);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(130deg, $black 50%, $darker-orange); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // background: -webkit-linear-gradient(130deg, $black 50%, $darker-orange);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(130deg, $black 50%, $darker-orange); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
 
   color: $white;
 
@@ -13,34 +15,227 @@
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 
-  .about-header {
-    width: 75%;
-
-    h2: {
-      font-size: $font-size-small;
-    }
-  }
-
-  .about-content {
+  .about-intro {
     display: flex;
     flex-direction: row;
     justify-content: stretch;
+    align-items: stretch;
+    height: 50vh;
+    max-height: 50vh;
+    margin-bottom: 5%;
 
-    .about-text {
+    z-index: 3;
+
+    .intro-text {
+      color: $gray;
+      flex-basis: 50%;
+
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
+      // padding-right: 8%;
 
-      flex-basis: 100%;
-      margin-right: 150px;
-      flex-shrink: 1;
+      & h2 {
+        color: $gray;
+      }
+
+      .intro-links-container {
+        position: relative;
+        z-index: 2;
+        height: 75px;
+
+        .intro-links-black-background {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          height: 100%;
+          width: 100%;
+
+          background: $black;
+          z-index: 3;
+
+          display: flex;
+          justify-content: stretch;
+          align-items: center;
+
+          padding: 0px 10px;
+
+          .intro-links {
+            flex-basis: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1px;
+    
+            .icon-link {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              &:hover {
+                background: none;
+                // if you're gonna do the whole tab color change,
+                // remove the black background container and have
+                // fillers like with the nav bar
+              }
+
+              .icon {
+                // filter: invert(69%) sepia(9%) saturate(17%) hue-rotate(316deg) brightness(92%) contrast(90%);  // gray
+                filter: invert(48%) sepia(85%) saturate(1832%) hue-rotate(332deg) brightness(109%) contrast(90%);  // orange
+      
+                &:hover {
+                  // opacity: 0%;
+                  filter: invert(87%) sepia(66%) saturate(477%) hue-rotate(75deg) brightness(100%) contrast(103%);  // teal
+                }
+              }
+            }
+          }
+        }
+
+        .intro-links-gradient-background {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(to right, $orange 30%, $teal);
+        }
+      }
+
     }
 
     .headshot-container {
-      flex-basis: 100%;
-      flex-shrink: 4;
+      flex-basis: 50%;
+      border-radius: 10px;
+      height: 50vh;
+      max-height: 50vh;
+      display: flex;
+      justify-content: flex-end;
+  
+      & img {
+        height: 50vh;
+        max-height: 50vh;
+      }
+    }
+  }
+
+  .about-blurbs-container {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+
+    .about-blurbs-gradient {
+      z-index: -2;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+
+      border-radius: 10px;
+
+      background: linear-gradient(to right, $dark-orange 25%, $dark-teal);
+    }
+
+    .about-blurbs {
+      display: flex;
+      flex-direction: row;
+      justify-content: stretch;
+      // position: relative;
+
+      .spacer {
+        background: $black;
+        flex-basis: 2%;
+        // border: 1px solid paleturquoise;
+      }
+
+      .blurb-container {
+        position: relative;
+
+        transition: margin-top 2s ease-out;
+        height: 155px;
+
+        flex-basis: 33.33%;
+        border-radius: 10px;
+   
+        & p {
+          text-align: left;
+          padding: 15px;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          font-size: $font-size-smaller;
+          color: $white;
+  
+          & a {
+            font-size: $font-size-smaller;
+            color: $white;
+            font-weight: 300;
+  
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        & .blocker:nth-child(1) {
+          content: "";
+          z-index: -1;
+          width: 100%;
+          height: 3000px;
+          background-color: $black;
+          // border: 1px solid palegoldenrod;
+
+          position: absolute;
+          top: -3000px;  // ! magic number
+          left: 0px;
+        }
+
+        & .blocker:nth-child(3) {
+          content: "";
+          z-index: -1;
+          width: 100%;
+          height: 3000px;
+          background-color: $black;
+          // border: 1px solid palegoldenrod;
+
+          position: absolute;
+          top: 155px;
+          left: 0px;
+        }
+
+        // todo blurbs need something else after them so they can show up as blurbs, rather than wiping up
+        &::after {
+          z-index: -1;
+          content: "";
+          height: 100%;
+          width: 100%;
+          background-color: transparent;
+
+          position: absolute;
+          top: 0px;
+          left: 0px;
+
+          border-radius: 10px;
+          box-shadow:
+            -9px 0px 0 0 $black,
+            9px 0px 0 0 $black
+          ;
+        }
+      }
+  
+      // .blurb:nth-child(1) {
+      //   transition: margin-top 1s ease-out;
+      // }
+      // .blurb:nth-child(3) {
+      //   transition: margin-top 1.5s ease-out;
+      // }
+      // .blurb:nth-child(5) {
+      //   transition: margin-top 2s ease-out;
+      // }
+      // * this creates the stagger using speed, rather than timing of start
     }
   }
 }
