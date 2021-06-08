@@ -65,6 +65,9 @@ const About = props => {
           <h2>
             I'm a Seattle-based web-developer specializing in intuitive and attractive web applications built with React and Rails.
           </h2>
+        </div>
+        <div className="headshot-container">
+          <img id="headshot" src={Headshot} alt="Headshot of Aaron Parisi"/>
           <div className="intro-links-container">
             {/* <div className="intro-links-gradient-background"></div> */}
             <div className="intro-links-black-background">
@@ -85,7 +88,6 @@ const About = props => {
             </div>
           </div>
         </div>
-        <div className="headshot-container"><img id="headshot" src={Headshot} alt="Headshot of Aaron Parisi"/></div>
       </div>
 
       <div className="about-blurbs-container" ref={ref}>
