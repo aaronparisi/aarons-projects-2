@@ -109,8 +109,7 @@ const About = props => {
 
             <StyledDiv margin={blurb3Margin} className="blurb-container">
               <div className="blocker"></div>
-              <p>Finally it dawned on me - I want to make web applications that're easy to use, look nice, and actually work.  With the help of <a href="https://open.appacademy.io/">App Academy Open</a>,
-              I've been able to teach myself to do that.</p>
+              <p>Finally it dawned on me - I really like making software that's easy to use, looks nice, and actually works.  With the help of <a href="https://open.appacademy.io/">App Academy Open</a>, I've been able to teach myself to do that.</p>
               <div className="blocker"></div>
             </StyledDiv>
           </div>

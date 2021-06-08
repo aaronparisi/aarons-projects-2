@@ -252,7 +252,7 @@ nav {
       height: 100%;
       width: 100%;
       border-radius: 10px;
-      background: linear-gradient(to right, #4b1f1b 25%, #164432); }
+      background: linear-gradient(to right, #4b1f1b 10%, #164432); }
     .about .about-blurbs-container .about-blurbs {
       display: flex;
       flex-direction: row;
@@ -263,15 +263,14 @@ nav {
       .about .about-blurbs-container .about-blurbs .blurb-container {
         position: relative;
         transition: margin-top 2s ease-out;
-        height: 155px;
+        height: 200px;
         flex-basis: 33.33%;
-        border-radius: 10px; }
+        display: flex;
+        align-items: center;
+        justify-content: center; }
         .about .about-blurbs-container .about-blurbs .blurb-container p {
           text-align: left;
-          padding: 15px;
-          position: absolute;
-          top: 0px;
-          left: 0px;
+          padding: 20px 30px;
           font-size: 16px;
           color: #FFFFFF; }
           .about .about-blurbs-container .about-blurbs .blurb-container p a {
@@ -297,7 +296,7 @@ nav {
           height: 3000px;
           background-color: #202020;
           position: absolute;
-          top: 155px;
+          top: 200px;
           left: 0px; }
         .about .about-blurbs-container .about-blurbs .blurb-container::after {
           z-index: -1;
@@ -308,8 +307,8 @@ nav {
           position: absolute;
           top: 0px;
           left: 0px;
-          border-radius: 10px;
-          box-shadow: -9px 0px 0 0 #202020, 9px 0px 0 0 #202020; }
+          border-radius: 30px;
+          box-shadow: -9px 9px 0 0 #202020, -9px -9px 0 0 #202020, 9px 9px 0 0 #202020, 9px -9px 0 0 #202020; }
 
 html {
   scroll-behavior: smooth; }

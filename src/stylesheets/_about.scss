@@ -1,5 +1,7 @@
 @import "vars";
 
+$blurb-height: 200px;
+
 .about {
   background: $black; /* fallback for old browsers */
   // background: -webkit-linear-gradient(130deg, $black 50%, $darker-orange);  /* Chrome 10-25, Safari 5.1-6 */
@@ -136,7 +138,7 @@
 
       border-radius: 10px;
 
-      background: linear-gradient(to right, $dark-orange 25%, $dark-teal);
+      background: linear-gradient(to right, $dark-orange 10%, $dark-teal);
     }
 
     .about-blurbs {
@@ -155,17 +157,17 @@
         position: relative;
 
         transition: margin-top 2s ease-out;
-        height: 155px;
+        height: $blurb-height;
 
         flex-basis: 33.33%;
-        border-radius: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
    
         & p {
           text-align: left;
-          padding: 15px;
-          position: absolute;
-          top: 0px;
-          left: 0px;
+          padding: 20px 30px;
           font-size: $font-size-smaller;
           color: $white;
   
@@ -203,7 +205,7 @@
           // border: 1px solid palegoldenrod;
 
           position: absolute;
-          top: 155px;
+          top: $blurb-height;
           left: 0px;
         }
 
@@ -219,10 +221,12 @@
           top: 0px;
           left: 0px;
 
-          border-radius: 10px;
+          border-radius: 30px;
           box-shadow:
-            -9px 0px 0 0 $black,
-            9px 0px 0 0 $black
+            -9px 9px 0 0 $black,
+            -9px -9px 0 0 $black,
+            9px 9px 0 0 $black,
+            9px -9px 0 0 $black
           ;
         }
       }
