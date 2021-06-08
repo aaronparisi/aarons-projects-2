@@ -24,6 +24,8 @@ const About = props => {
   const [blurb2Margin, setBlurb2Margin] = useState('500px')
   const [blurb3Margin, setBlurb3Margin] = useState('500px')
 
+  const [footerMargin, setFooterMargin] = useState('500px')
+
   const [ref, entry] = useOnScreen({
     
   })
@@ -32,28 +34,33 @@ const About = props => {
     if (entry.intersectionRatio > 0) {
       // * this makes them hit the top at the same time
       setBlurb1Margin('0px')
-      setBlurb2Margin('0px')
-      setBlurb3Margin('0px')
+      // setBlurb2Margin('0px')
+      // setBlurb3Margin('0px')
       
       // * this makes them hit the top separately
-      // setBlurb1Margin('0px')
-      // setTimeout(() => {
-      //   setBlurb2Margin('0px')
-      // }, 250);
+      setBlurb1Margin('0px')
+      setTimeout(() => {
+        setBlurb2Margin('0px')
+      }, 250);
 
-      // setTimeout(() => {
-      //   setBlurb3Margin('0px')
-      // }, 500);
+      setTimeout(() => {
+        setBlurb3Margin('0px')
+      }, 500);
+
+      setTimeout(() => {
+        setFooterMargin('4%')
+      }, 750);
     } else {
       // * ... for hitting the top at the same time
-      setBlurb1Margin('1000px')
-      setBlurb2Margin('2000px')
-      setBlurb3Margin('3000px')
+      // setBlurb1Margin('250px')
+      // setBlurb2Margin('1250px')
+      // setBlurb3Margin('2250px')
 
       // * ... for hitting the top separately
-      // setBlurb1Margin('500px')
-      // setBlurb2Margin('500px')
-      // setBlurb3Margin('500px')
+      setBlurb1Margin('500px')
+      setBlurb2Margin('500px')
+      setBlurb3Margin('500px')
+      setFooterMargin('500px')
     }
   })
 
@@ -117,12 +124,12 @@ const About = props => {
         </div>
       </div>
 
-      <div className="about-footer">
+      <StyledDiv className="about-footer" margin={footerMargin} >
         <h2>Check out some of my projects!</h2>
         <div className="scroll-btn-container">
           <a className="bouncer" id="bouncer-about" href="#projects">&or;</a>
         </div>
-      </div>
+      </StyledDiv>
     </div>
   );
 }

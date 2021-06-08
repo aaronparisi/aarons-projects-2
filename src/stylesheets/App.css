@@ -279,7 +279,7 @@ nav {
         flex-basis: 2%; }
       .about .about-blurbs-container .about-blurbs .blurb-container {
         position: relative;
-        transition: margin-top 2s ease-out;
+        transition: margin-top .75s ease-out;
         height: 200px;
         flex-basis: 33.33%;
         display: flex;
@@ -328,10 +328,14 @@ nav {
           box-shadow: -9px 9px 0 0 #202020, -9px -9px 0 0 #202020, 9px 9px 0 0 #202020, 9px -9px 0 0 #202020; }
   .about .about-footer {
     z-index: 2;
-    margin-top: 4%;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    position: relative;
+    transition: margin-top .75s ease-out; }
+    .about .about-footer .scroll-btn-container {
+      position: absolute;
+      bottom: -225%; }
 
 html {
   scroll-behavior: smooth; }
