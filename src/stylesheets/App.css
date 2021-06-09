@@ -308,7 +308,7 @@ nav {
       height: 100%;
       width: 100%;
       border-radius: 10px;
-      background: linear-gradient(to right, #4b1f1b 10%, #164432); }
+      background: linear-gradient(160deg, #4b1f1b, #164432); }
   .about .about-footer {
     flex-basis: 1%;
     flex-grow: 2;
