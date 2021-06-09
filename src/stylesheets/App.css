@@ -211,7 +211,7 @@ nav {
     flex-basis: 2%; }
   .about-blurbs .blurb-container {
     position: relative;
-    transition: margin-top 0.5s ease-out;
+    transition: margin-top 1s ease-out;
     min-height: 200px;
     height: max-content;
     flex-basis: 33.33%;
@@ -229,7 +229,7 @@ nav {
         min-height: 200px;
         width: 100%;
         background-color: #202020;
-        transition: opacity 0.5s ease-out, z-index 0.5s; }
+        transition: opacity 1s ease-out, z-index 1s; }
       .about-blurbs .blurb-container .blurb-body p {
         text-align: left;
         padding: 20px 30px;

@@ -11,21 +11,26 @@ const StyledDiv = styled.div`
 `
 
 const About = props => {
+  const blurbVisibleMargin = '10px';
+  const blurbHiddenMargin = '100px'
+  const footerVisibleMargin = '4vh'
+  const footerHiddenMargin = '500px'
+
   const [blurb1, setBlurb1] = useState({
-    margin: '100px',
+    margin: blurbHiddenMargin,
     overlayOpacity: '1'
   })
   const [blurb2, setBlurb2] = useState({
-    margin: '100px',
+    margin: blurbHiddenMargin,
     overlayOpacity: '1'
   })
   const [blurb3, setBlurb3] = useState({
-    margin: '100px',
+    margin: blurbHiddenMargin,
     overlayOpacity: '1'
   })
 
   const [footerStyles, setFooterStyles] = useState({
-    margin: '500px',
+    margin: footerHiddenMargin,
     opacity: '0'
   })
 
@@ -40,27 +45,27 @@ const About = props => {
 
     if (entry.intersectionRatio > 0) {
       setBlurb1({
-        margin: '0px',
+        margin: blurbVisibleMargin,
         overlayOpacity: '0'
       })
 
       setTimeout(() => {
         setBlurb2({
-          margin: '0px',
+          margin: blurbVisibleMargin,
           overlayOpacity: '0'
         })
       }, 250);
 
       setTimeout(() => {
         setBlurb3({
-          margin: '0px',
+          margin: blurbVisibleMargin,
           overlayOpacity: '0'
         })
       }, 500);
 
       setTimeout(() => {
         setFooterStyles({
-          margin: '4vh',
+          margin: footerVisibleMargin,
           opacity: '1'
         })
       }, 750);
@@ -69,19 +74,19 @@ const About = props => {
     } else {
       // ! if we only animate one time this else condition is unnecessary
       setBlurb1({
-        margin: '100px',
+        margin: blurbHiddenMargin,
         overlayOpacity: '1'
       })
       setBlurb2({
-        margin: '100px',
+        margin: blurbHiddenMargin,
         overlayOpacity: '1'
       })
       setBlurb3({
-        margin: '100px',
+        margin: blurbHiddenMargin,
         overlayOpacity: '1'
       })
       setFooterStyles({
-        margin: '500px',
+        margin: footerHiddenMargin,
         opacity: '0'
       })
     }
