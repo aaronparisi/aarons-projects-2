@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <div className="logo-container">
       <a className="logo" href="#root">
-        <h1>A.</h1>
+        <h1>AP</h1>
       </a>
     </div>
   )

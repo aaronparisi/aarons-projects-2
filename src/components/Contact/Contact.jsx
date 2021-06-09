@@ -1,12 +1,28 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import emailjs, { init } from 'emailjs-com'
 init("user_GjyD0j0dNrlKS9KVIfHed")
 
 const Contact = props => {
-  const [fromName, setFromName] = useState("")
-  const [email, setEmail] = useState("")
-  const [msgBody, setMsgBody] = useState("")
+  const [inputVals, setInputVals] = useState({
+    fromName: '',
+    email: '',
+    msgBody: ''
+  })
+  
   const [submitDisabled, setSubmitDisabled] = useState(true)
+
+  useEffect(() => {
+    checkSubmitDisable()
+  })
+
+  const handleChange = (e) => {
+    e.preventDefault()
+    
+    setInputVals({
+      ...inputVals,
+      [e.target.name]: e.target.value
+    })
+  }
 
   const handleInputBlur = e => {
     e.preventDefault()
@@ -18,9 +34,13 @@ const Contact = props => {
     } else {
       e.currentTarget.style=`background-color: #164432`
 
-      if (email !== "" && fromName !== "" && msgBody !== "") {
-        setSubmitDisabled(false)
-      }
+      checkSubmitDisable()
+    }
+  }
+
+  const checkSubmitDisable = () => {
+    if (inputVals.email !== "" && inputVals.fromName !== "" && inputVals.msgBody !== "") {
+      setSubmitDisabled(false)
     }
   }
 
@@ -29,16 +49,16 @@ const Contact = props => {
 
     const templateId = 'template_auga2g4';
   
-    sendFeedback(templateId, { message: msgBody, from_name: fromName, reply_to: email })
+    sendFeedback(templateId, { message: inputVals.msgBody, from_name: inputVals.fromName, reply_to: inputVals.email })
   }
   
   const sendFeedback = (templateId, variables) => {
     emailjs.send(
       'service_jfp0y1e', templateId, variables
       ).then(res => {
-        setEmail("")
-        setFromName("")
-        setMsgBody("")
+        setInputVals({ email: ''})
+        setInputVals({ fromName: ''})
+        setInputVals({ msgBody: ''})
         window.scrollTo(0,0)
         alert("Thanks for contacting me!")
       })
@@ -56,29 +76,32 @@ const Contact = props => {
       >
         <input 
           type="text" 
-          name="Name" 
-          id="Name"
-          value={fromName}
-          onChange={e => setFromName(e.currentTarget.value)}
+          name="fromName" 
+          id="fromName"
+          value={inputVals.fromName}
+          // onChange={e => setFromName(e.currentTarget.value)}
+          onChange={e => handleChange(e)}
           onBlur={e => handleInputBlur(e)}
           placeholder="Name"
         />
         <input 
           type="email" 
-          name="Email" 
-          id="Email"
-          value={email}
-          onChange={e => setEmail(e.currentTarget.value)}
+          name="email" 
+          id="email"
+          value={inputVals.email}
+          // onChange={e => setEmail(e.currentTarget.value)}
+          onChange={e => handleChange(e)}
           onBlur={e => handleInputBlur(e)}
           placeholder="Email"
         />
         <textarea 
-          name="Message" 
-          id="Message" 
+          name="msgBody" 
+          id="msgBody" 
           cols="30" 
           rows="10"
-          value={msgBody}
-          onChange={e => setMsgBody(e.currentTarget.value)}
+          value={inputVals.msgBody}
+          // onChange={e => setMsgBody(e.currentTarget.value)}
+          onChange={e => handleChange(e)}
           onBlur={e => handleInputBlur(e)}
           placeholder="Say hi..."
         ></textarea>

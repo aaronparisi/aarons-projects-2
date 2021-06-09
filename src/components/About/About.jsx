@@ -79,7 +79,7 @@ const About = props => {
           </h2>
         </div>
         <div className="headshot-container">
-          <img class="headshot" id="headshot" src={Headshot} alt="Headshot of Aaron Parisi"/>
+          <img className="headshot" id="headshot" src={Headshot} alt="Headshot of Aaron Parisi"/>
           <div className="intro-links">
             <a className="icon-link" rel="noreferrer" target="_blank" href="https://www.github.com/aaronparisi">
               <img className="icon" src={GitHub} alt="GitHub icon" />
