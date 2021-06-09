@@ -8,6 +8,8 @@ import Email from '../../icons/email.png'
 import Resume from '../../icons/resume.png'
 import styled from 'styled-components';
 
+import Pdf from '../../pdfs/resume_parisi_aaron.pdf'
+
 // require('react-dom')
 // window.React2 = require('react')
 // console.log(window.React1 === window.React2)
@@ -90,7 +92,7 @@ const About = props => {
             <a className="icon-link" href="mailto:parisi.aaron@gmail.com">
               <img className="icon" src={Email} alt="email icon" />
             </a>
-            <a className="icon-link" rel="noreferrer" target="_blank" href="../../pdfs/resume_parisi_aaron.pdf">
+            <a className="icon-link" rel="noreferrer" target="_blank" href={Pdf}>
               <img className="icon" src={Resume} alt="resume icon" />
             </a>
           </div>

@@ -4,6 +4,8 @@ import LinkedIn from '../../icons/linkedin.png'
 import Email from '../../icons/email.png'
 import Resume from '../../icons/resume.png'
 
+import Pdf from '../../pdfs/resume_parisi_aaron.pdf'
+
 const Footer = props => {
 
   return (
@@ -19,7 +21,7 @@ const Footer = props => {
         <a className="icon-link" href="mailto:parisi.aaron@gmail.com">
           <img className="icon" src={Email} alt="email icon" />
         </a>
-        <a className="icon-link" rel="noreferrer" target="_blank" href="../../pdfs/resume_parisi_aaron.pdf">
+        <a className="icon-link" rel="noreferrer" target="_blank" href={Pdf}>
           <img className="icon" src={Resume} alt="resume icon" />
         </a>
       </div>
