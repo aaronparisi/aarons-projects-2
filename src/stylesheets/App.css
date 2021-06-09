@@ -461,6 +461,35 @@ nav {
         .contact form button:disabled h2 {
           color: #222222; }
 
+.footer {
+  padding-top: 5%;
+  width: 100%;
+  background-color: #202020;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .footer p {
+    position: absolute;
+    left: 2%;
+    color: #F26C52;
+    font-size: 16px; }
+  .footer .intro-links {
+    display: flex;
+    flex-direction: row; }
+    .footer .intro-links .icon-link {
+      flex-basis: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .footer .intro-links .icon-link .icon {
+        height: 70%;
+        max-height: 150px;
+        filter: invert(48%) sepia(85%) saturate(1832%) hue-rotate(332deg) brightness(109%) contrast(90%); }
+        .footer .intro-links .icon-link .icon:hover {
+          filter: invert(87%) sepia(66%) saturate(477%) hue-rotate(75deg) brightness(100%) contrast(103%); }
+
 html {
   scroll-behavior: smooth; }
 

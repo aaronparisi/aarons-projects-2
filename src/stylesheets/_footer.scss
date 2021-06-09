@@ -1,0 +1,42 @@
+@import "vars";
+
+.footer {
+  padding-top: 5%;
+  width: 100%;
+  background-color: $black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  & p {
+    position: absolute;
+    left: 2%;
+    color: $orange;
+    font-size: $font-size-smaller
+  }
+
+  & .intro-links {
+    display: flex;
+    flex-direction: row;
+
+    .icon-link {
+      flex-basis: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .icon {
+        height: 70%;
+        max-height: 150px;
+        filter: invert(48%) sepia(85%) saturate(1832%) hue-rotate(332deg) brightness(109%) contrast(90%);  // orange
+
+        &:hover {
+          filter: invert(87%) sepia(66%) saturate(477%) hue-rotate(75deg) brightness(100%) contrast(103%);  // teal
+        }
+      }
+    }
+  }
+}

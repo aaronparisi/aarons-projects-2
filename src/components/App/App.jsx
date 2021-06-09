@@ -6,6 +6,7 @@ import AboutContainer from '../About/AboutContainer'
 import Logo from '../NavBar/Logo';
 import ProjectsContainer from '../Projects/ProjectsContainer';
 import ContactContainer from '../Contact/ContactContainer'
+import FooterContainer from '../Footer/FooterContainer'
 
 const App = ({ fetchCurrentUser }) => {
 
@@ -21,6 +22,7 @@ const App = ({ fetchCurrentUser }) => {
       <Route exact path="/" component={AboutContainer} />
       <Route exact path="/" component={ProjectsContainer}/>
       <Route exact path="/" component={ContactContainer} />
+      <Route exact path="/" component={FooterContainer} />
     </React.Fragment>
   );
 }
