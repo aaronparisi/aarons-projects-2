@@ -18,7 +18,7 @@ $blurb-transition-speed: .5s;
   .blurb-container {
     position: relative;
 
-    transition: margin-top $blurb-transition-speed ease-out, background-color $blurb-transition-speed ease-out;
+    transition: margin-top $blurb-transition-speed ease-out;
     min-height: $blurb-height;
     height: max-content;
 
@@ -30,14 +30,17 @@ $blurb-transition-speed: .5s;
     justify-content: center;
 
     & .blurb-body {
+      min-height: $blurb-height;
+
       & .overlay {
         position: absolute;
         top: 0px;
         left: 0px;
         height: 100%;
+        min-height: $blurb-height;
         width: 100%;
         background-color: #202020;
-        transition: opacity $blurb-transition-speed ease-out;
+        transition: opacity $blurb-transition-speed ease-out, z-index $blurb-transition-speed;
       }
 
       & p {

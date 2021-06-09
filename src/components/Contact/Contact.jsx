@@ -22,7 +22,7 @@ const Contact = props => {
     
     setInputVals({
       ...inputVals,
-      [e.target.name]: e.target.value
+      [e.target.id]: e.target.value
     })
   }
 
@@ -78,7 +78,7 @@ const Contact = props => {
       >
         <input 
           type="text" 
-          name="fromName" 
+          name="Name" 
           id="fromName"
           value={inputVals.fromName}
           // onChange={e => setFromName(e.currentTarget.value)}
@@ -88,7 +88,7 @@ const Contact = props => {
         />
         <input 
           type="email" 
-          name="email" 
+          name="Email" 
           id="email"
           value={inputVals.email}
           // onChange={e => setEmail(e.currentTarget.value)}
@@ -97,7 +97,7 @@ const Contact = props => {
           placeholder="Email"
         />
         <textarea 
-          name="msgBody" 
+          name="Body" 
           id="msgBody" 
           cols="30" 
           rows="10"

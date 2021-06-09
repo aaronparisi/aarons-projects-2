@@ -54,7 +54,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 4;
+  z-index: 1002;
   background-color: #202020; }
 
 nav {
@@ -211,7 +211,7 @@ nav {
     flex-basis: 2%; }
   .about-blurbs .blurb-container {
     position: relative;
-    transition: margin-top 0.5s ease-out, background-color 0.5s ease-out;
+    transition: margin-top 0.5s ease-out;
     min-height: 200px;
     height: max-content;
     flex-basis: 33.33%;
@@ -219,26 +219,29 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-    .about-blurbs .blurb-container .blurb-body .overlay {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      height: 100%;
-      width: 100%;
-      background-color: #202020;
-      transition: opacity 0.5s ease-out; }
-    .about-blurbs .blurb-container .blurb-body p {
-      text-align: left;
-      padding: 20px 30px;
-      font-size: 16px;
-      color: #FFFFFF; }
-      .about-blurbs .blurb-container .blurb-body p a {
+    .about-blurbs .blurb-container .blurb-body {
+      min-height: 200px; }
+      .about-blurbs .blurb-container .blurb-body .overlay {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        min-height: 200px;
+        width: 100%;
+        background-color: #202020;
+        transition: opacity 0.5s ease-out, z-index 0.5s; }
+      .about-blurbs .blurb-container .blurb-body p {
+        text-align: left;
+        padding: 20px 30px;
         font-size: 16px;
-        color: #FFFFFF;
-        font-weight: 300; }
-        .about-blurbs .blurb-container .blurb-body p a:hover {
-          cursor: pointer;
-          text-decoration: underline; }
+        color: #FFFFFF; }
+        .about-blurbs .blurb-container .blurb-body p a {
+          font-size: 16px;
+          color: #FFFFFF;
+          font-weight: 300; }
+          .about-blurbs .blurb-container .blurb-body p a:hover {
+            cursor: pointer;
+            text-decoration: underline; }
     .about-blurbs .blurb-container .blocker {
       content: "";
       z-index: -1;
@@ -320,7 +323,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: margin-top 0.75s ease-out, opacity 0.75s cubic-bezier(1, -0.18, 1, 1); }
+    transition: margin-top 2s ease-out, opacity 3s cubic-bezier(1, -0.18, 1, 1); }
     .about .about-footer .scroll-btn-container {
       position: initial;
       flex-direction: column-reverse; }
@@ -335,12 +338,13 @@ nav {
 
 .projects {
   background-color: #202020;
-  margin-top: 100px;
+  padding-top: 100px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch; }
+  align-items: stretch;
+  z-index: 1001; }
   .projects .blank-tile {
     flex-basis: 33.33%;
     background-color: #302E30;
