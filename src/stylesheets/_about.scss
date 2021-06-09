@@ -1,6 +1,6 @@
 @import "vars";
+@import "blurb";
 
-$blurb-height: 200px;
 $intro-text-height: 40vh;
 
 .about {
@@ -131,108 +131,6 @@ $intro-text-height: 40vh;
       border-radius: 10px;
 
       background: linear-gradient(to right, $dark-orange 10%, $dark-teal);
-    }
-
-    .about-blurbs {
-      display: flex;
-      flex-direction: row;
-      justify-content: stretch;
-      // position: relative;
-
-      .spacer {
-        background: $black;
-        flex-basis: 2%;
-        // border: 1px solid paleturquoise;
-      }
-
-      .blurb-container {
-        position: relative;
-
-        transition: margin-top .75s ease-out;
-        height: $blurb-height;
-
-        flex-basis: 33.33%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-   
-        & p {
-          text-align: left;
-          padding: 20px 30px;
-          font-size: $font-size-smaller;
-          color: $white;
-  
-          & a {
-            font-size: $font-size-smaller;
-            color: $white;
-            font-weight: 300;
-  
-            &:hover {
-              cursor: pointer;
-              text-decoration: underline;
-            }
-          }
-        }
-
-        & .blocker:nth-child(1) {
-          content: "";
-          z-index: -1;
-          width: 100%;
-          height: 3000px;
-          background-color: $black;
-          // border: 1px solid palegoldenrod;
-
-          position: absolute;
-          top: -3000px;  // ! magic number
-          left: 0px;
-        }
-
-        & .blocker:nth-child(3) {
-          content: "";
-          z-index: -1;
-          width: 100%;
-          height: 3000px;
-          background-color: $black;
-          // border: 1px solid palegoldenrod;
-
-          position: absolute;
-          top: $blurb-height;
-          left: 0px;
-        }
-
-        // todo blurbs need something else after them so they can show up as blurbs, rather than wiping up
-        &::after {
-          z-index: -1;
-          content: "";
-          height: 100%;
-          width: 100%;
-          background-color: transparent;
-
-          position: absolute;
-          top: 0px;
-          left: 0px;
-
-          border-radius: 30px;
-          box-shadow:
-            -9px 9px 0 0 $black,
-            -9px -9px 0 0 $black,
-            9px 9px 0 0 $black,
-            9px -9px 0 0 $black
-          ;
-        }
-      }
-  
-      // .blurb:nth-child(1) {
-      //   transition: margin-top 1s ease-out;
-      // }
-      // .blurb:nth-child(3) {
-      //   transition: margin-top 1.5s ease-out;
-      // }
-      // .blurb:nth-child(5) {
-      //   transition: margin-top 2s ease-out;
-      // }
-      // * this creates the stagger using speed, rather than timing of start
     }
   }
 

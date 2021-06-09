@@ -1,32 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { useOnScreen } from '../../utils/helpers';
+import styled from 'styled-components';
+
+import BlurbContainer from './BlurbContainer'
 
 import Headshot from "../../images/headshot.png"
 import GitHub from '../../icons/github.png'
 import LinkedIn from '../../icons/linkedin.png'
 import Email from '../../icons/email.png'
 import Resume from '../../icons/resume.png'
-import styled from 'styled-components';
 
 import Pdf from '../../pdfs/resume_parisi_aaron.pdf'
 
-// require('react-dom')
-// window.React2 = require('react')
-// console.log(window.React1 === window.React2)
-
-// const StyledP = styled.p`
-//   margin-top: ${ ({ ratio }) => ratio > 0 ? '0px' : '500px' };
-// `
 const StyledDiv = styled.div`
   margin-top: ${ ({ margin }) => margin };
 `
 
 const About = props => {
-  const [blurb1Margin, setBlurb1Margin] = useState('500px')
-  const [blurb2Margin, setBlurb2Margin] = useState('500px')
-  const [blurb3Margin, setBlurb3Margin] = useState('500px')
+  const [blurb1, setBlurb1] = useState({
+    margin: '100px',
+    overlayOpacity: '1'
+  })
+  const [blurb2, setBlurb2] = useState({
+    margin: '100px',
+    overlayOpacity: '1'
+  })
+  const [blurb3, setBlurb3] = useState({
+    margin: '100px',
+    overlayOpacity: '1'
+  })
 
-  const [footerMargin, setFooterMargin] = useState('500px')
+  const [footerMargin, setFooterMargin] = useState('100px')
   const [animated, setAnimated] = useState(false)
 
   const [ref, entry] = useOnScreen({
@@ -37,40 +41,47 @@ const About = props => {
     if (animated) return;
 
     if (entry.intersectionRatio > 0) {
-      // * this makes them hit the top at the same time
-      setBlurb1Margin('0px')
-      // setBlurb2Margin('0px')
-      // setBlurb3Margin('0px')
-      
-      // * this makes them hit the top separately
-      setBlurb1Margin('0px')
+      setBlurb1({
+        margin: '0px',
+        overlayOpacity: '0'
+      })
+
       setTimeout(() => {
-        setBlurb2Margin('0px')
+        setBlurb2({
+          margin: '0px',
+          overlayOpacity: '0'
+        })
       }, 250);
 
       setTimeout(() => {
-        setBlurb3Margin('0px')
+        setBlurb3({
+          margin: '0px',
+          overlayOpacity: '0'
+        })
       }, 500);
 
       setTimeout(() => {
         setFooterMargin('4vh')
       }, 750);
 
-      setAnimated(true)
+      // setAnimated(true)  // * uncomment to limit animation to 1 time
     } else {
-      // * ... for hitting the top at the same time
-      // setBlurb1Margin('250px')
-      // setBlurb2Margin('1250px')
-      // setBlurb3Margin('2250px')
-
-      // * ... for hitting the top separately
-      setBlurb1Margin('500px')
-      setBlurb2Margin('500px')
-      setBlurb3Margin('500px')
-      setFooterMargin('500px')
+      // ! if we only animate one time this else condition is unnecessary
+      setBlurb1({
+        margin: '100px',
+        overlayOpacity: '1'
+      })
+      setBlurb2({
+        margin: '100px',
+        overlayOpacity: '1'
+      })
+      setBlurb3({
+        margin: '100px',
+        overlayOpacity: '1'
+      })
     }
-  })
-
+  }, [entry.intersectionRatio])
+  
   return (
     <div className="about" id="about" data-nav="show">
       <div className="about-intro">
@@ -102,27 +113,31 @@ const About = props => {
       <div className="about-blurbs-container" ref={ref}>
         <div className="about-blurbs-gradient"></div>
         <div className="about-blurbs">
-          <StyledDiv margin={blurb1Margin} className="blurb-container">
-            <div className="blocker"></div>
-            <p>It started when I was teaching AP Calculus BC, Multivariable Calculus, and Statistics at <a href="https://www.salisburyschool.org/">Salisbury School</a> on a whiteboard.  It's hard enough explaining a vector integral without also having to hand-draw it...</p>
-            <div className="blocker"></div>
+          <StyledDiv className="blurb-container" margin={blurb1.margin} >
+            <BlurbContainer
+              overlayOpacity={blurb1.overlayOpacity} 
+              text={<p>It started when I was teaching AP Calculus BC, Multivariable Calculus, and Statistics at <a href="https://www.salisburyschool.org/">Salisbury School</a> on a whiteboard.  It's hard enough explaining a vector integral without also having to hand-draw it...</p>}
+            />
           </StyledDiv>
 
           <div className="spacer"></div>
 
-          <StyledDiv margin={blurb2Margin} className="blurb-container">
-            <div className="blocker"></div>
-            <p>Then I worked a job at a <a href="https://www.1031services.com/">real estate exchange company</a> whose database software had some, er, quirks.  Imagine clicking 'like' on your friend's latest facebook photo, only to be unexpectedly taken to your old AIM account...</p>
-            <div className="blocker"></div>
+          <StyledDiv className="blurb-container" margin={blurb2.margin} >
+            <BlurbContainer 
+              overlayOpacity={blurb2.overlayOpacity} 
+              text={<p>Then I worked a job at a <a href="https://www.1031services.com/">real estate exchange company</a> whose database software had some, er, quirks.  Imagine clicking 'like' on your friend's latest facebook photo, only to be unexpectedly taken to your old AIM account...</p>}
+            />
           </StyledDiv>
 
           <div className="spacer"></div>
 
-          <StyledDiv margin={blurb3Margin} className="blurb-container">
-            <div className="blocker"></div>
-            <p>Finally it dawned on me - I really like making software that's easy to use, looks nice, and actually works.  With the help of <a href="https://open.appacademy.io/">App Academy Open</a>, I've been able to teach myself to do that.</p>
-            <div className="blocker"></div>
+          <StyledDiv className="blurb-container" margin={blurb3.margin} >
+            <BlurbContainer  
+              overlayOpacity={blurb3.overlayOpacity} 
+              text={<p>Finally it dawned on me - I really like making software that's easy to use, looks nice, and actually works.  With the help of <a href="https://open.appacademy.io/">App Academy Open</a>, I've been able to teach myself to do that.</p>}
+            />
           </StyledDiv>
+
         </div>
       </div>
 
