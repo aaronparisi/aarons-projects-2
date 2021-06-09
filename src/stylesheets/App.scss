@@ -8,10 +8,10 @@
 @import "projects";
 @import "blinking_cursor";
 @import "contact";
-@import "footer";
 
 html {
   scroll-behavior: smooth;
+  background-color: $black;
 }
 
 h1 {

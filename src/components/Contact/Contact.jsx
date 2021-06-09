@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import FooterContainer from '../Footer/FooterContainer'
+
 import emailjs, { init } from 'emailjs-com'
 init("user_GjyD0j0dNrlKS9KVIfHed")
 
@@ -113,6 +115,8 @@ const Contact = props => {
           <h2>Send Email</h2>
         </button>
       </form>
+
+      <FooterContainer />
     </div>
   )
 }
