@@ -14,6 +14,7 @@ import Pdf from '../../pdfs/resume_parisi_aaron.pdf'
 
 const StyledDiv = styled.div`
   margin-top: ${ ({ margin }) => margin };
+  opacity: ${ ({ opacity }) => (opacity !== undefined) ? opacity : '1' };
 `
 
 const About = props => {
@@ -30,7 +31,11 @@ const About = props => {
     overlayOpacity: '1'
   })
 
-  const [footerMargin, setFooterMargin] = useState('100px')
+  const [footerStyles, setFooterStyles] = useState({
+    margin: '500px',
+    opacity: '0'
+  })
+
   const [animated, setAnimated] = useState(false)
 
   const [ref, entry] = useOnScreen({
@@ -61,7 +66,10 @@ const About = props => {
       }, 500);
 
       setTimeout(() => {
-        setFooterMargin('4vh')
+        setFooterStyles({
+          margin: '4vh',
+          opacity: '1'
+        })
       }, 750);
 
       // setAnimated(true)  // * uncomment to limit animation to 1 time
@@ -78,6 +86,10 @@ const About = props => {
       setBlurb3({
         margin: '100px',
         overlayOpacity: '1'
+      })
+      setFooterStyles({
+        margin: '500px',
+        opacity: '0'
       })
     }
   }, [entry.intersectionRatio])
@@ -141,7 +153,7 @@ const About = props => {
         </div>
       </div>
 
-      <StyledDiv className="about-footer" margin={footerMargin} >
+      <StyledDiv className="about-footer" margin={footerStyles.margin} opacity={footerStyles.opacity} >
         <h2>Check out some of my projects!</h2>
         <div className="scroll-btn-container">
           {/* <a className="bouncer" id="bouncer-about" href="#projects">&or;</a> */}
