@@ -35,12 +35,11 @@ const About = props => {
   })
 
   const [animated, setAnimated] = useState(false)
-
   const [ref, entry] = useOnScreen({
     
   })
 
-  useEffect(() => {
+  const toggleBlurbStates = () => {
     if (animated) return;
 
     if (entry.intersectionRatio > 0) {
@@ -70,7 +69,7 @@ const About = props => {
         })
       }, 750);
 
-      // setAnimated(true)  // * uncomment to limit animation to 1 time
+      setAnimated(true)  // * uncomment to limit animation to 1 time
     } else {
       // ! if we only animate one time this else condition is unnecessary
       setBlurb1({
@@ -90,6 +89,10 @@ const About = props => {
         opacity: '0'
       })
     }
+  }
+
+  useEffect(() => {
+    toggleBlurbStates()
   }, [entry.intersectionRatio])
   
   return (

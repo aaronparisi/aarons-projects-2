@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 export function debounce(func, wait, immediate) {
   let timeout;
 
-  return function() {
+  const ret = function() {
     let context = this, args = arguments;
 
     let later = () => {
@@ -22,9 +22,11 @@ export function debounce(func, wait, immediate) {
       func.apply(context, args)
     }
   }
+
+  return ret;
 }
 
-export function useOnScreen({ root = null}) {
+export function useOnScreen({ root = null }) {
   const [entry, updateEntry] = useState({})
   const [node, setNode] = useState(null)
 
