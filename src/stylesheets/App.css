@@ -548,8 +548,8 @@ a {
   justify-content: center; }
 
 .icon {
-  filter: invert(51%) sepia(99%) saturate(2469%) hue-rotate(300deg) brightness(92%) contrast(93%); }
+  filter: invert(51%) sepia(99%) saturate(2469%) hue-rotate(300deg) brightness(92%) contrast(93%) !important; }
   .icon:hover {
-    filter: invert(81%) sepia(58%) saturate(470%) hue-rotate(109deg) brightness(89%) contrast(90%); }
+    filter: invert(81%) sepia(58%) saturate(470%) hue-rotate(109deg) brightness(89%) contrast(90%) !important; }
 
 /*# sourceMappingURL=App.css.map */
