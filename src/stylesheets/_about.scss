@@ -30,7 +30,8 @@ $intro-text-height: 40vh;
   .about-intro {
     display: flex;
     flex-direction: row;
-    justify-content: stretch;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 4%;
     margin-bottom: 1%;
@@ -40,11 +41,14 @@ $intro-text-height: 40vh;
     .intro-text {
       color: $gray;
       flex-basis: 50%;
+      flex-grow: 1;
+      width: 50%;
+      min-width: 275px;
 
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      margin-right: 3%;
+      padding-right: 3%;
 
       & h1 {
         text-shadow: 1px 1px 0px $teal;

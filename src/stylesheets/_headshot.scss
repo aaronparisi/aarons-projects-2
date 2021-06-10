@@ -3,6 +3,8 @@
 .headshot-container {
 
   border-radius: 10px;
+  flex-basis: 50%;
+  flex-grow: 1;
   width: 50%;
 
   &:after {
