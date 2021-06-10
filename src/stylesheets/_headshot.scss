@@ -3,8 +3,13 @@
 .headshot-container {
 
   border-radius: 10px;
-  height: 40vh;
-  width: 40vh;
+  width: 50%;
+
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
 
   position: relative;
 

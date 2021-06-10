@@ -165,9 +165,12 @@ nav {
 
 .headshot-container {
   border-radius: 10px;
-  height: 40vh;
-  width: 40vh;
+  width: 50%;
   position: relative; }
+  .headshot-container:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%; }
   .headshot-container:hover .intro-links {
     visibility: visible;
     background-color: #202020d7; }
@@ -284,9 +287,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: stretch;
-    align-items: stretch;
-    height: 40vh;
-    max-height: 40vh;
+    align-items: center;
     margin-top: 4%;
     margin-bottom: 1%;
     z-index: 3; }
@@ -296,7 +297,7 @@ nav {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      margin-right: 10%; }
+      margin-right: 3%; }
       .about .about-intro .intro-text h1 {
         text-shadow: 1px 1px 0px #52FFBB; }
       .about .about-intro .intro-text h2 {
