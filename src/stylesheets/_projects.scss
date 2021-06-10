@@ -7,9 +7,9 @@
   padding-top: $nav-height;
 
   display: flex;
-  flex-direction: stretch;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: stretch;
 
   z-index: 1001;
 

@@ -352,9 +352,9 @@ nav {
   background-color: #202020;
   padding-top: 100px;
   display: flex;
-  flex-direction: stretch;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: stretch;
   z-index: 1001; }
   .projects .grid-tile {
     flex-basis: 33.33%;
