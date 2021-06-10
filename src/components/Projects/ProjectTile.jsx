@@ -6,7 +6,7 @@ import GitHub from '../../icons/github.png';
 const ProjectTile = ({ title, description, pageUrl, gitUrl, imageUrl, techs }) => {
   
   return (
-    <div className="project-tile" data-nav="show">
+    <div className="project-tile grid-tile" data-nav="show">
       <img src={imageUrl} alt={`thumbnail for ${title}`} />
       <div className="tile-overlay">
         <h2>{title}</h2>

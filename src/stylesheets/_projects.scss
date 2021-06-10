@@ -7,15 +7,19 @@
   padding-top: $nav-height;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: stretch;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch;
 
   z-index: 1001;
 
-  .blank-tile {
+  .grid-tile {
     flex-basis: 33.33%;
+    flex-grow: 1;
+    min-width: 300px;
+  }
+
+  .blank-tile {
     background-color: $med-dark-gray;
     color: $teal;
     font-family: $font-fam-code;
