@@ -39,6 +39,10 @@ nav {
 .border-blocker {
   height: 100%;
   flex-grow: 1;
+
+  &:first-child {
+    min-width: 18%;
+  }
 }
 
 .nav-link {

@@ -79,6 +79,8 @@ nav {
 .border-blocker {
   height: 100%;
   flex-grow: 1; }
+  .border-blocker:first-child {
+    min-width: 18%; }
 
 .nav-link {
   height: 100%;
