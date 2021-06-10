@@ -6,6 +6,8 @@
   flex-basis: 50%;
   flex-grow: 1;
   width: 50%;
+  max-height: 400px;
+  max-width: 400px;
 
   &:after {
     content: "";

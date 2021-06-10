@@ -15,8 +15,8 @@ const ProjectTile = ({ title, description, pageUrl, gitUrl, imageUrl, techs }) =
           {techs.join(" | ")}
         </div>
         <div className="tile-links">
-          <a href={pageUrl}><img className="icon" src={ExternalLink} alt="external link" /></a>
-          <a href={gitUrl}><img className="icon" src={GitHub} alt="github link" /></a>
+          <a target="_blank" rel="noreferrer" href={pageUrl}><img className="icon" src={ExternalLink} alt="external link" /></a>
+          <a target="_blank" rel="noreferrer" href={gitUrl}><img className="icon" src={GitHub} alt="github link" /></a>
         </div>
       </div>
 

@@ -35,7 +35,7 @@ const Projects = props => {
       <ProjectTileContainer
         title="Developer Portfolio 1.0"
         imageUrl={Portfolio1}
-        pageUrl="http://www.aaronparisidev.com"
+        pageUrl="http://www.v1.aaronparisidev.com"
         gitUrl="https://github.com/aaronparisi/aarons-projects"
         description="My first stab at my personal website"
         techs={["React"]}
