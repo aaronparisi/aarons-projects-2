@@ -20,17 +20,29 @@ $translucent-black: #202020d7;
 $black: #202020;
 $white: #FFFFFF;
 
-$darker-orange: #351613;
-$dark-orange: #4b1f1b;
-$med-orange: #993f37;
-$orange: #F26C52;
-$light-orange: #f3a99b;
+// $darker-orange: #351613;
+// $dark-orange: #4b1f1b;
+// $med-orange: #993f37;
+// $orange: #F26C52;
+// $light-orange: #f3a99b;
 
-$dark-teal: #164432;
-$med-teal: #3aaf80;
-$teal: #52FFBB;
-$lght-teal: #9afdd6;
 
-// :export {
-//   navHeight: $nav-height
-// }
+$darker-orange: #381326;
+$dark-orange: #72264c;
+$med-orange: #a73970;
+$orange: #E4509A;
+$light-orange: #d496b5;
+
+$orange-filter: invert(51%) sepia(99%) saturate(2469%) hue-rotate(300deg) brightness(92%) contrast(93%);
+
+// $dark-teal: #164432;
+// $med-teal: #3aaf80;
+// $teal: #52FFBB;
+// $lght-teal: #9afdd6;
+
+$dark-teal: #0e6359;
+$med-teal: #30968a;
+$teal: #46D9C8;
+$light-teal: #88f1e5;
+
+$teal-filter: invert(81%) sepia(58%) saturate(470%) hue-rotate(109deg) brightness(89%) contrast(90%);

@@ -50,3 +50,11 @@ a {
   flex-direction: column;
   justify-content: center;
 }
+
+.icon {
+  filter: $orange-filter;
+
+  &:hover {
+    filter: $teal-filter;
+  }
+}

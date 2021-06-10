@@ -30,11 +30,11 @@ const Contact = props => {
     e.preventDefault()
 
     if (e.currentTarget.value === "") {
-      e.currentTarget.style=`background-color: #4b1f1b;`
+      e.currentTarget.style=`background-color: #72264c;`
       e.currentTarget.placeholder = `${e.currentTarget.name} is required`
       setSubmitDisabled(true)
     } else {
-      e.currentTarget.style=`background-color: #164432`
+      e.currentTarget.style=`background-color: #0e6359`
 
       checkSubmitDisable()
     }

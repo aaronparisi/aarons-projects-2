@@ -1,7 +1,6 @@
 @import "vars";
 
 .footer {
-  padding-top: 5%;
   width: 2%;
   display: flex;
   flex-direction: column-reverse;
@@ -9,8 +8,8 @@
   align-items: flex-start;
 
   position: fixed;
-  bottom: 2%;
-  left: 2%;
+  bottom: 1%;
+  left: 1%;
 
   z-index: 1000;
 
@@ -34,11 +33,6 @@
       .icon {
         height: 20%;
         max-height: 30px;
-        filter: invert(48%) sepia(85%) saturate(1832%) hue-rotate(332deg) brightness(109%) contrast(90%);  // orange
-
-        &:hover {
-          filter: invert(87%) sepia(66%) saturate(477%) hue-rotate(75deg) brightness(100%) contrast(103%);  // teal
-        }
       }
     }
   }

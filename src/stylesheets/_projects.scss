@@ -104,13 +104,6 @@
 
           & .icon {
             height: 35px;
-            // filter: invert(69%) sepia(9%) saturate(17%) hue-rotate(316deg) brightness(92%) contrast(90%);  // gray
-            filter: invert(48%) sepia(85%) saturate(1832%) hue-rotate(332deg) brightness(109%) contrast(90%);  // orange
-    
-            &:hover {
-              // opacity: 0%;
-              filter: invert(87%) sepia(66%) saturate(477%) hue-rotate(75deg) brightness(100%) contrast(103%);  // teal
-            }
           }
         }
       }
