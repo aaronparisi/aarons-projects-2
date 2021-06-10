@@ -9,8 +9,7 @@ $intro-text-height: 40vh;
   background: $black; /* fallback for old browsers */
   // background: -webkit-linear-gradient(130deg, $black 50%, $darker-orange);  /* Chrome 10-25, Safari 5.1-6 */
   // background: linear-gradient(130deg, $black 50%, $darker-orange); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  height: 100vh;
+  
   min-height: 765px;
 
   overflow-y: hidden;
@@ -49,6 +48,8 @@ $intro-text-height: 40vh;
       flex-direction: column;
       justify-content: space-around;
       padding-right: 3%;
+
+      text-align: center;
 
       & h1 {
         text-shadow: 1px 1px 0px $teal;

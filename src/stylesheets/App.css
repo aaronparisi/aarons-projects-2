@@ -225,7 +225,11 @@ nav {
     align-items: center;
     justify-content: center; }
     .about-blurbs .blurb-container .blurb-body {
-      min-height: 200px; }
+      min-height: 200px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
       .about-blurbs .blurb-container .blurb-body .overlay {
         position: absolute;
         top: 0px;
@@ -237,7 +241,7 @@ nav {
         transition: opacity 1s ease-out, z-index 1s; }
       .about-blurbs .blurb-container .blurb-body p {
         text-align: left;
-        padding: 20px 30px;
+        padding: 10%;
         font-size: 16px;
         color: #FFFFFF; }
         .about-blurbs .blurb-container .blurb-body p a {
@@ -274,7 +278,6 @@ nav {
 .about {
   background: #202020;
   /* fallback for old browsers */
-  height: 100vh;
   min-height: 765px;
   overflow-y: hidden;
   color: #FFFFFF;
@@ -303,7 +306,8 @@ nav {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      padding-right: 3%; }
+      padding-right: 3%;
+      text-align: center; }
       .about .about-intro .intro-text h1 {
         text-shadow: 1px 1px 0px #52FFBB; }
       .about .about-intro .intro-text h2 {
