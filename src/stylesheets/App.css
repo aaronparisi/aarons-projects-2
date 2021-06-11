@@ -373,11 +373,47 @@ nav {
     background-color: #302E30;
     color: #46D9C8;
     font-family: "Fira Code", monospace;
+    font-size: 24px;
+    overflow: scroll;
+    position: relative;
     padding: 3%; }
     .projects .blank-tile .terminal-text {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      padding: 5%;
       display: flex;
-      flex-direction: row;
-      align-items: center; }
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: flex-start;
+      overflow: scroll; }
+      .projects .blank-tile .terminal-text .prev-commands {
+        display: flex;
+        flex-direction: column; }
+        .projects .blank-tile .terminal-text .prev-commands .cmd {
+          display: flex;
+          flex-direction: row; }
+      .projects .blank-tile .terminal-text .cmdPrompt {
+        margin-right: 5px; }
+      .projects .blank-tile .terminal-text form {
+        display: flex;
+        flex-direction: row; }
+        .projects .blank-tile .terminal-text form input {
+          padding: 0;
+          font-family: "Fira Code", monospace;
+          font-size: 24px;
+          color: #46D9C8;
+          border: none;
+          box-shadow: none;
+          outline: none;
+          background-color: #302E30;
+          word-wrap: break-word;
+          word-break: break-all; }
+          .projects .blank-tile .terminal-text form input:focus {
+            box-shadow: none;
+            outline: none; }
   .projects .project-tile {
     flex-basis: 33.33%;
     overflow: hidden;
@@ -414,7 +450,7 @@ nav {
         font-size: 16px;
         color: #30968a; }
       .projects .project-tile .tile-overlay .tile-links {
-        width: 50%;
+        width: 30%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -429,7 +465,7 @@ nav {
 #blinking-cursor {
   visibility: visible;
   font-weight: 100;
-  font-size: 64px;
+  font-size: 24px;
   color: #46D9C8; }
 
 .blinked-off {

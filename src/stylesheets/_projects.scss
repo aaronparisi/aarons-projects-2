@@ -23,11 +23,62 @@
     background-color: $med-dark-gray;
     color: $teal;
     font-family: $font-fam-code;
+    font-size: $font-size-small;
+    overflow: scroll;
+    position: relative;
 
     .terminal-text {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      padding: 5%;
+
       display: flex;
-      flex-direction: row;
-      align-items: center;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: flex-start;
+      overflow: scroll;
+
+      .prev-commands {
+        display: flex;
+        flex-direction: column;
+
+        & .cmd {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+
+      .cmdPrompt {
+        margin-right: 5px;
+      }
+
+      & form {
+        display: flex;
+        flex-direction: row;
+
+        & input {
+          // width: 0px;
+          padding: 0;
+          font-family: $font-fam-code;
+          font-size: $font-size-small;
+          color: $teal;
+          border: none;
+          box-shadow: none;
+          outline: none;
+          background-color: $med-dark-gray;
+          word-wrap: break-word;
+          word-break: break-all;
+  
+          &:focus {
+            // border: none;
+            box-shadow: none;
+            outline: none;
+          }
+        }
+      }
     }
 
     padding: 3%;
@@ -91,7 +142,7 @@
       }
 
       & .tile-links {
-        width: 50%;
+        width: 30%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
