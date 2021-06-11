@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import FooterContainer from '../Footer/FooterContainer'
+// import vars from '../../stylesheets/_vars.scss'
 
 import emailjs, { init } from 'emailjs-com'
 init("user_GjyD0j0dNrlKS9KVIfHed")
@@ -30,11 +31,11 @@ const Contact = props => {
     e.preventDefault()
 
     if (e.currentTarget.value === "") {
-      e.currentTarget.style=`background-color: #72264c;`
+      e.currentTarget.style=`background-color: #381326;`
       e.currentTarget.placeholder = `${e.currentTarget.name} is required`
       setSubmitDisabled(true)
     } else {
-      e.currentTarget.style=`background-color: #0e6359`
+      e.currentTarget.style=`background-color: #302E30`
 
       checkSubmitDisable()
     }

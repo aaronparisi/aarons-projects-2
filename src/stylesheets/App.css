@@ -337,7 +337,7 @@ nav {
       height: 99.99%;
       width: 99.99%;
       border-radius: 10px;
-      background: linear-gradient(160deg, #490929, #04453d); }
+      background: linear-gradient(160deg, #490929, #04383f); }
   .about .about-footer {
     flex-basis: 100%;
     flex-grow: 2;
@@ -524,6 +524,7 @@ nav {
       box-sizing: border-box;
       font-family: "Fira Code", monospace;
       font-size: 20px;
+      color: #a3a1a1;
       width: 100%;
       padding: 20px 25px;
       margin: 10px 0px;
@@ -537,7 +538,7 @@ nav {
       .contact form input[type="text"]:hover, .contact form input[type="email"]:hover, .contact form textarea:hover {
         background-color: #a3a1a1; }
       .contact form input[type="text"]:focus, .contact form input[type="email"]:focus, .contact form textarea:focus {
-        background-color: #d1d0d0 !important;
+        background-color: #5e5a5e !important;
         border: none;
         outline: none;
         box-shadow: none; }
