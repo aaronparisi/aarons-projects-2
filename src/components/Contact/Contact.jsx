@@ -16,7 +16,7 @@ const Contact = props => {
 
   useEffect(() => {
     checkSubmitDisable()
-  })
+  }, [inputVals])
 
   const handleChange = (e) => {
     e.preventDefault()
@@ -44,6 +44,8 @@ const Contact = props => {
   const checkSubmitDisable = () => {
     if (inputVals.email !== "" && inputVals.fromName !== "" && inputVals.msgBody !== "") {
       setSubmitDisabled(false)
+    } else {
+      setSubmitDisabled(true)
     }
   }
 
