@@ -1,8 +1,6 @@
 @import "vars";
 @import "footer";
 
-$form-border-radius: 5px;
-
 .contact {
   height: 100vh;
   min-height: 850px;
@@ -40,7 +38,7 @@ $form-border-radius: 5px;
       padding: 20px 25px;
       margin: 10px 0px;
   
-      border-radius: $form-border-radius;
+      border-radius: $border-radius;
   
       border: none;
       outline: none;
@@ -77,7 +75,7 @@ $form-border-radius: 5px;
       border: none;
       box-shadow: none;
 
-      border-radius: $form-border-radius;
+      border-radius: $border-radius;
 
       & h2 {
         text-shadow: 1px 1px 0px $black;

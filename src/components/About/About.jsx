@@ -113,25 +113,21 @@ const About = props => {
           <StyledDiv className="blurb-container" margin={blurb1.margin} >
             <BlurbContainer
               overlayOpacity={blurb1.overlayOpacity} 
-              text={<p>It started when I was teaching AP Calculus BC, Multivariable Calculus, and Statistics at <a href="https://www.salisburyschool.org/">Salisbury School</a> on a whiteboard.  It's hard enough explaining a vector integral without also having to hand-draw it...</p>}
+              text={<p>It started when I was teaching AP Calculus BC, Multivariable Calculus, and Statistics at <a href="https://www.salisburyschool.org/">Salisbury School</a> on a whiteboard.  Vector integrals are really hard to hand-draw.</p>}
             />
           </StyledDiv>
-
-          <div className="spacer"></div>
 
           <StyledDiv className="blurb-container" margin={blurb2.margin} >
             <BlurbContainer 
               overlayOpacity={blurb2.overlayOpacity} 
-              text={<p>Then I worked a job at a <a href="https://www.1031services.com/">real estate exchange company</a> whose database software had some, er, quirks.  Imagine clicking 'like' on your friend's latest facebook photo, only to be unexpectedly taken to your old AIM account...</p>}
+              text={<p>Then I worked a job at a <a href="https://www.1031services.com/">real estate exchange company</a> whose database software had some, er... quirks.  As in, click a link to a client's file and end up at a different client's file... or no client at all!</p>}
             />
           </StyledDiv>
-
-          <div className="spacer"></div>
 
           <StyledDiv className="blurb-container" margin={blurb3.margin} >
             <BlurbContainer  
               overlayOpacity={blurb3.overlayOpacity} 
-              text={<p>Finally it dawned on me - I really like making software that's easy to use, looks nice, and actually works.  With the help of <a href="https://open.appacademy.io/">App Academy Open</a>, I've been able to teach myself to do that.</p>}
+              text={<p>Finally it dawned on me - I really want to make software that's easy to use, looks nice, and actually works.  With the help of <a href="https://open.appacademy.io/">appAcademy</a>, now I can do that.</p>}
             />
           </StyledDiv>
 

@@ -9,12 +9,10 @@ const BlockerDiv = styled.div`
 const Blurb = ({ overlayOpacity, text }) => {
   return (
     <React.Fragment>
-      <div className="blocker"></div>
       <div className="blurb-body">
         <BlockerDiv opacity={overlayOpacity} className="overlay"></BlockerDiv>
         {text}
       </div>
-      <div className="blocker"></div>
     </React.Fragment>
   )
 }

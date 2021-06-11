@@ -2,11 +2,17 @@
 
 $blurb-height: 200px;
 $blurb-transition-speed: 1s;
+$blurb-margin: 9px;
+
+@function neg($val) {
+  @return $val * -1
+}
 
 .about-blurbs {
   display: flex;
   flex-direction: row;
   justify-content: stretch;
+  align-items: center;
   // position: relative;
 
   .spacer {
@@ -29,6 +35,12 @@ $blurb-transition-speed: 1s;
     align-items: center;
     justify-content: center;
 
+    &:first-child, &:nth-child(2) {
+      margin-right: $blurb-margin;
+    }
+    // margin-left: 2%;
+    // margin-right: 2%;
+
     & .blurb-body {
       min-height: $blurb-height;
       display: flex;
@@ -50,12 +62,12 @@ $blurb-transition-speed: 1s;
       & p {
         text-align: left;
         padding: 10%;
-        font-size: $font-size-smaller;
-        color: $white;
+        font-size: $font-size-med-small;
+        color: $med-light-gray;
 
         & a {
-          font-size: $font-size-smaller;
-          color: $white;
+          font-size: $font-size-med-small;
+          color: $light-gray;
           font-weight: 300;
 
           &:hover {
@@ -96,12 +108,27 @@ $blurb-transition-speed: 1s;
       top: 0px;
       left: 0px;
 
-      border-radius: 30px;
+      border-radius: $border-radius;
       box-shadow:
-        -9px 9px 0 0 $black,
-        -9px -9px 0 0 $black,
-        9px 9px 0 0 $black,
-        9px -9px 0 0 $black
+        // rounded corners
+        neg($blurb-margin) $blurb-margin 0 0 $black,
+        neg($blurb-margin) neg($blurb-margin) 0 0 $black,
+        $blurb-margin $blurb-margin 0 0 $black,
+        $blurb-margin neg($blurb-margin) 0 0 $black,
+
+        // vertical blockers for upward animation
+        0px 150px 0 0 $black,
+        0px -150px 0 0 $black,
+        0px 300px 0 0 $black,
+        0px -300px 0 0 $black,
+
+        // additional shadows for corner scraps
+        neg($blurb-margin) 150px 0 0 $black,
+        neg($blurb-margin) -150px 0 0 $black,
+        $blurb-margin 150px 0 0 $black,
+        $blurb-margin -150px 0 0 $black,
+
+        // if needed, add more w 300px y offset?
       ;
     }
   }
