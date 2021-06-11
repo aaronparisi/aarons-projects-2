@@ -40,7 +40,7 @@ img {
     .logo-container .logo h1 {
       text-shadow: 1px 1px 0px #202020; }
     .logo-container .logo:hover {
-      background-color: #46D9C8;
+      background-color: #2fceda;
       cursor: pointer; }
     .logo-container .logo h1 {
       font-size: 30px; }
@@ -100,7 +100,7 @@ nav {
   height: 101px;
   min-height: 101px;
   margin-top: -100px;
-  background: linear-gradient(to right, #E4509A 20%, #46D9C8); }
+  background: linear-gradient(to right, #E4509A 5%, #2fceda); }
 
 .hero {
   margin-top: -100px;
@@ -123,9 +123,9 @@ nav {
   width: 100%;
   background: #F0F2F0;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(130deg, #490929 5%, #202020);
+  background: -webkit-linear-gradient(130deg, #381326 5%, #04383f);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(130deg, #490929 5%, #202020);
+  background: linear-gradient(130deg, #381326 5%, #04383f);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: .7;
   z-index: 1; }
@@ -142,7 +142,7 @@ nav {
   align-items: center;
   justify-content: center; }
   .hero-text h1 {
-    text-shadow: 1px 1px 0px #46D9C8;
+    text-shadow: 1px 1px 0px #2fceda;
     text-align: center;
     margin-bottom: 5%; }
 
@@ -155,7 +155,7 @@ nav {
   .scroll-btn-container a {
     font-size: 64px;
     color: #FFFFFF;
-    text-shadow: 1px 1px 0px #46D9C8;
+    text-shadow: 1px 1px 0px #2fceda;
     margin-bottom: 0px;
     transition: margin-bottom .5s ease-in; }
     .scroll-btn-container a:hover {
@@ -320,7 +320,7 @@ nav {
       padding-right: 3%;
       text-align: center; }
       .about .about-intro .intro-text h1 {
-        text-shadow: 1px 1px 0px #46D9C8; }
+        text-shadow: 1px 1px 0px #2fceda; }
       .about .about-intro .intro-text h2 {
         color: #a3a1a1; }
   .about .about-blurbs-container {
@@ -374,7 +374,7 @@ nav {
     min-width: 300px; }
   .projects .blank-tile {
     background-color: #302E30;
-    color: #46D9C8;
+    color: #2fceda;
     font-family: "Fira Code", monospace;
     font-size: 24px;
     overflow: scroll;
@@ -390,8 +390,7 @@ nav {
       display: flex;
       flex-direction: column-reverse;
       justify-content: flex-start;
-      align-items: flex-start;
-      overflow: scroll; }
+      align-items: flex-start; }
       .projects .blank-tile .terminal-text .prev-commands {
         display: flex;
         flex-direction: column; }
@@ -407,7 +406,7 @@ nav {
           padding: 0;
           font-family: "Fira Code", monospace;
           font-size: 24px;
-          color: #46D9C8;
+          color: #2fceda;
           border: none;
           box-shadow: none;
           outline: none;
@@ -451,7 +450,7 @@ nav {
       .projects .project-tile .tile-overlay .techs {
         font-family: "Fira Code", monospace;
         font-size: 16px;
-        color: #30968a; }
+        color: #1c9ca5; }
       .projects .project-tile .tile-overlay .tile-links {
         width: 30%;
         display: flex;
@@ -469,7 +468,7 @@ nav {
   visibility: visible;
   font-weight: 100;
   font-size: 24px;
-  color: #46D9C8; }
+  color: #2fceda; }
 
 .blinked-off {
   visibility: hidden !important; }
@@ -547,16 +546,16 @@ nav {
     .contact form button {
       background-color: #E4509A;
       color: #FFFFFF;
-      padding: 20px 25px;
+      padding: 20px 40px;
       margin-top: 10px;
       border: none;
       box-shadow: none;
-      border-radius: 5px; }
+      border-radius: 40px; }
       .contact form button h2 {
         text-shadow: 1px 1px 0px #202020; }
       .contact form button:hover {
         cursor: pointer;
-        background-color: #46D9C8; }
+        background-color: #2fceda; }
       .contact form button:disabled {
         background-color: #302E30;
         cursor: default; }
@@ -572,7 +571,7 @@ h1 {
   font-weight: 900;
   font-size: 64px;
   color: #FFFFFF;
-  text-shadow: 1px 1px 0px #46D9C8; }
+  text-shadow: 1px 1px 0px #2fceda; }
 
 h2 {
   font-family: "Exo", sans-serif;

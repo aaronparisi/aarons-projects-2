@@ -70,13 +70,13 @@
     button {
       background-color: $orange;
       color: $white;
-      padding: 20px 25px;
+      padding: 20px 40px;
       margin-top: 10px;
 
       border: none;
       box-shadow: none;
 
-      border-radius: $border-radius;
+      border-radius: $button-border-radius;
 
       & h2 {
         text-shadow: 1px 1px 0px $black;

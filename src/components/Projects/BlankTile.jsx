@@ -6,8 +6,6 @@ const StyledSpan = styled.span`
   margin-left: ${ ({ margin }) => margin }
 `
 
-const fontWidth = 15;
-
 const BlankTile = props => {
   const [termText, setTermText] = useState('')
   const [commands, setCommands] = useState([])
@@ -45,7 +43,7 @@ const BlankTile = props => {
           {
             commands.map((cmd, idx) => {
               return (
-                <li className="cmd" id={idx}>
+                <li className="cmd" key={idx}>
                   <div className="cmdPrompt">$</div>{cmd}
                 </li>
               )
