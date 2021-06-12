@@ -18,20 +18,16 @@
     justify-content: center;
     align-items: center;
   
-    background-color: $orange;
-    box-shadow: 0px 0px 7px 1px $black;
+    background-color: $black;
+    border: 1px solid $med-gray;
     border-radius: $border-radius;
   
     height: 50px;
     width: 50px;
     padding: 30%;
 
-    h1 {
-      text-shadow: 1px 1px 0px $black;
-    }
-
     &:hover {
-      background-color: $teal;
+      background: radial-gradient(at top left, $black 50%, $darker-orange);
       cursor: pointer;
     }
   

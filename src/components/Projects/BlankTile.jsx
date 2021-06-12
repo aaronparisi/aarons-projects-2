@@ -35,7 +35,7 @@ const BlankTile = props => {
             type="text"
             id="cmd-input"
             value={termText}
-            placeholder="sudo rm -rf"
+            placeholder="type something..."
             onChange={e => handleText(e)}
           />
         </form>

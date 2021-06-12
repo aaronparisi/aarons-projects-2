@@ -1,8 +1,8 @@
-$font-fam-header: 'Exo', sans-serif;
+$font-fam-header: 'Staatliches', sans-serif;
 $font-fam-code: 'Fira Code', monospace;
 $font-fam-text: 'Exo', sans-serif;
 
-$font-size-larger: 78px;
+$font-size-larger: 90px;
 $font-size-large: 64px;
 $font-size-medium: 30px;
 $font-size-small: 24px;
@@ -11,45 +11,41 @@ $font-size-smaller: 16px;
 
 $nav-height: 100px;
 $border-radius: 5px;
-$button-border-radius: 40px;
+$button-border-radius: 10px;
 
-$dark-gray: #222222;
-$med-dark-gray: #302E30;
-$med-gray: #5e5a5e;
-$gray: #a3a1a1;
-$med-light-gray: #cfcfcf;
-$light-gray: #d1d0d0;
+$dark-gray: #111930;
+$med-dark-gray: #192341;
+$med-gray: #2a334d;
+$gray: #4b5675;
+$med-light-gray: #6c7794;
+$light-gray: #99a3c0;
 
-$translucent-black: #202020d7;
-$black: #202020;
+$translucent-black: #0b1327cc;
+$black: #0b1327;
 $white: #FFFFFF;
 
-// $darker-orange: #351613;
-// $dark-orange: #4b1f1b;
-// $med-orange: #993f37;
-// $orange: #F26C52;
-// $light-orange: #f3a99b;
+$darker-orange: #3d001d;
+$dark-orange: #74083a;
+$med-orange: #b30858;
+$orange: #E31475;
+$light-orange: #fd8bc0;
+$lighter-orange: #ffb0d5;
 
+$orange-filter: invert(18%) sepia(95%) saturate(4602%) hue-rotate(322deg) brightness(91%) contrast(95%);
 
-$darker-orange: #381326;
-$dark-orange: #490929;
-$med-orange: #a73970;
-$orange: #E4509A;
-$light-orange: #d496b5;
+$dark-teal: #001d25;
+$med-teal: #007191;
+$teal: #00b5e7;
+$light-teal: #57dbff;
+$lighter-teal: #a1ebff;
 
-$orange-filter: invert(51%) sepia(99%) saturate(2469%) hue-rotate(300deg) brightness(92%) contrast(93%);
+$teal-filter: invert(56%) sepia(22%) saturate(3315%) hue-rotate(154deg) brightness(95%) contrast(101%);
 
-// $dark-teal: #164432;
-// $med-teal: #3aaf80;
-// $teal: #52FFBB;
-// $lght-teal: #9afdd6;
+$yellow: #ffee00;
+$yellow-orange: #ec964f;
 
-$dark-teal: #04383f;
-$med-teal: #1c9ca5;
-$teal: #2fceda;
-$light-teal: #6de9f1;
+$yellow-filter: invert(82%) sepia(100%) saturate(1665%) hue-rotate(344deg) brightness(96%) contrast(115%);
 
-$teal-filter: invert(81%) sepia(58%) saturate(470%) hue-rotate(109deg) brightness(89%) contrast(90%);
 
 // :export {
 //   darkerOrange: $darker-orange;

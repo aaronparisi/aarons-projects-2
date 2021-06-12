@@ -20,7 +20,7 @@
   }
 
   .blank-tile {
-    background-color: $med-dark-gray;
+    background-color: $black;
     color: $teal;
     font-family: $font-fam-code;
     font-size: $font-size-small;
@@ -39,6 +39,8 @@
       flex-direction: column-reverse;
       justify-content: flex-start;
       align-items: flex-start;
+
+      overflow: scroll;
 
       .prev-commands {
         display: flex;
@@ -67,7 +69,7 @@
           border: none;
           box-shadow: none;
           outline: none;
-          background-color: $med-dark-gray;
+          background-color: $black;
           word-wrap: break-word;
           word-break: break-all;
   
@@ -127,17 +129,18 @@
 
       & h2 {
         text-align: center;
+        color: $white;
       }
 
       & p {
         font-size: $font-size-med-small;
-        // text-align: center;
+        color: $white;
       }
 
       & .techs {
         font-family: $font-fam-code;
         font-size: $font-size-smaller;
-        color: $med-teal;
+        color: $teal;
       }
 
       & .tile-links {

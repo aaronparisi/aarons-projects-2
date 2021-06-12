@@ -35,7 +35,7 @@ const Contact = props => {
       e.currentTarget.placeholder = `${e.currentTarget.name} is required`
       setSubmitDisabled(true)
     } else {
-      e.currentTarget.style=`background-color: #302E30`
+      e.currentTarget.style=`background-color: ''`
 
       checkSubmitDisable()
     }

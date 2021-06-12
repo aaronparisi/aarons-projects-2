@@ -6,9 +6,7 @@
 $intro-text-height: 40vh;
 
 .about {
-  background: $black; /* fallback for old browsers */
-  // background: -webkit-linear-gradient(130deg, $black 50%, $darker-orange);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(130deg, $black 50%, $darker-orange); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: $black;
   
   min-height: 765px;
 
@@ -20,9 +18,6 @@ $intro-text-height: 40vh;
   padding-top: $nav-height;
 
   display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: stretch;
 
   flex-direction: row;
   flex-wrap: wrap;
@@ -64,12 +59,8 @@ $intro-text-height: 40vh;
 
       text-align: center;
 
-      & h1 {
-        text-shadow: 1px 1px 0px $teal;
-      }
-
       & h2 {
-        color: $gray;
+        color: $light-gray;
       }
 
     }
@@ -92,7 +83,7 @@ $intro-text-height: 40vh;
 
       border-radius: 10px;
 
-      background: linear-gradient(160deg, $dark-orange, $dark-teal);
+      background: radial-gradient(at top left, $orange 0%, $yellow-orange);
     }
   }
 
@@ -109,6 +100,10 @@ $intro-text-height: 40vh;
     justify-content: center;
 
     transition: margin-top 2s ease-out, opacity 3s cubic-bezier(1, -0.18, 1, 1);
+
+    & h2 {
+      color: $white;
+    }
     
     .scroll-btn-container {
       position: initial;

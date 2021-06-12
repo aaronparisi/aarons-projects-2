@@ -27,15 +27,11 @@
   height: 100%;
   width: 100%;
 
-  background: #F0F2F0;  /* fallback for old browsers */
-  // background: -webkit-linear-gradient(130deg,$dark-orange, $dark-teal);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(130deg,$dark-orange, $dark-teal); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  // background: -webkit-linear-gradient(130deg,$dark-orange, $light-orange);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(130deg,$dark-orange, $light-orange); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: -webkit-linear-gradient(130deg,$darker-orange 5%, $dark-teal);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(130deg,$darker-orange 5%, $dark-teal); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: $black;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(130deg, $black 15%, $darker-orange);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(130deg, $black 15%, $darker-orange); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  opacity: .7;
+  opacity: .85;
   
   z-index: 1;
 }
@@ -54,8 +50,8 @@
   justify-content: center;
 
   h1 {
-    text-shadow: 1px 1px 0px $teal;
     text-align: center;
     margin-bottom: 5%;
+    font-size: $font-size-larger;
   }
 }

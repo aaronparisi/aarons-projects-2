@@ -33,7 +33,7 @@
   
       font-family: $font-fam-code;
       font-size: $font-size-med-small;
-      color: $gray;
+      color: $light-gray;
   
       width: 100%;
       padding: 20px 25px;
@@ -68,7 +68,7 @@
     }
   
     button {
-      background-color: $orange;
+      background-color: $black;
       color: $white;
       padding: 20px 40px;
       margin-top: 10px;
@@ -77,22 +77,24 @@
       box-shadow: none;
 
       border-radius: $button-border-radius;
+      border: 1px solid $gray;
 
       & h2 {
-        text-shadow: 1px 1px 0px $black;
+        color: $white;
       }
   
       &:hover {
         cursor: pointer;
-        background-color: $teal;
+        background: radial-gradient(at top left, $black 50%, $darker-orange);
       }
   
       &:disabled {
-        background-color: $med-dark-gray;
         & h2 {
-          color: $dark-gray;
+          color: $med-gray;
         }
         cursor: default;
+        background: $black;
+        border-color: $med-gray;
       }
     }
   }
