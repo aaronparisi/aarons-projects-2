@@ -97,6 +97,11 @@ $blurb-margin: 9px;
         neg($blurb-margin) -300px 0 0 $black,
         $blurb-margin 300px 0 0 $black,
         $blurb-margin -300px 0 0 $black,
+
+        neg($blurb-margin) 450px 0 0 $black,
+        neg($blurb-margin) -450px 0 0 $black,
+        $blurb-margin 450px 0 0 $black,
+        $blurb-margin -450px 0 0 $black,
       ;
     }
   }

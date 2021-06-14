@@ -10,7 +10,7 @@ const Home = props => {
 
       <div className="hero-text">
         <h1>Web applications even my parents could use.</h1>
-        <Bouncer className={"bouncer"} id={"hero-bouncer"} />
+        <Bouncer className={"bouncer"} id={"hero-bouncer"} href="#about"/>
       </div>
 
     </div>
