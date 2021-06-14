@@ -55,3 +55,9 @@
     font-size: $font-size-larger;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .hero .hero-text h1 {
+    font-size: $font-size-large;
+  }
+}

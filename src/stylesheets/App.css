@@ -144,6 +144,9 @@ nav {
     margin-bottom: 5%;
     font-size: 90px; }
 
+@media screen and (max-width: 500px) {
+  .hero .hero-text h1 {
+    font-size: 64px; } }
 .scroll-btn-container {
   position: absolute;
   bottom: 0px;
@@ -373,6 +376,9 @@ nav {
     min-width: 0px; }
     .about .about-blurbs-container .about-blurbs-gradient {
       height: 100%; } }
+@media screen and (max-width: 500px) {
+  .about .about-footer-container {
+    margin-bottom: 25%; } }
 .projects {
   background-color: #0b1327;
   padding-top: 100px;
