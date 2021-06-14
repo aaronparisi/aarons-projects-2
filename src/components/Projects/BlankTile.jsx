@@ -1,10 +1,4 @@
 import React, { useState } from 'react'
-import styled from 'styled-components';
-
-const StyledSpan = styled.span`
-  visibility: ${ ({ visibility }) => visibility};
-  margin-left: ${ ({ margin }) => margin }
-`
 
 const BlankTile = props => {
   const [termText, setTermText] = useState('')

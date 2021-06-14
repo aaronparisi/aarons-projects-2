@@ -2,74 +2,57 @@
 
 $blurb-height: 200px;
 $blurb-transition-speed: 1s;
+$opacity-transition-speed: 2s;
 $blurb-margin: 9px;
 
 @function neg($val) {
   @return $val * -1
 }
 
-.about-blurbs {
-  display: flex;
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: center;
-  // position: relative;
+.blurb-container {
+  min-height: $blurb-height;
+  overflow: visible;
+  
+  flex-basis: 33.33%;
+  position: relative;
 
-  .spacer {
-    background: $black;
-    flex-basis: 2%;
-    // border: 1px solid paleturquoise;
+  &:nth-child(2), &:nth-child(3) {
+    margin-right: $blurb-margin;
   }
 
-  .blurb-container {
-    position: relative;
+  .blurb {
+    transition: top $blurb-transition-speed ease-out;
 
-    transition: margin-top $blurb-transition-speed ease-out;
-    min-height: $blurb-height;
-    height: max-content;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  
+    .blurb-contents-container {
+      position: relative;
+      width: 100%;
 
-    flex-basis: 33.33%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    &:first-child, &:nth-child(2) {
-      margin-right: $blurb-margin;
-    }
-    // margin-left: 2%;
-    // margin-right: 2%;
-
-    & .blurb-body {
-      min-height: $blurb-height;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-
-      & .overlay {
+      & .blurb-blocker {
         position: absolute;
         top: 0px;
         left: 0px;
         height: 100%;
         min-height: $blurb-height;
         width: 100%;
-        background-color: #202020;
-        transition: opacity $blurb-transition-speed ease-out, z-index $blurb-transition-speed;
+        background-color: $black;
+        transition: opacity $opacity-transition-speed ease-in, z-index $opacity-transition-speed ease-in;
       }
-
-      & p {
+    
+      & .blurb-text {
         text-align: left;
         padding: 10%;
         font-size: $font-size-med-small;
         color: $black;
-
+    
         & a {
           font-size: $font-size-med-small;
           color: $dark-teal;
           font-weight: 300;
-
+    
           &:hover {
             cursor: pointer;
             text-decoration: underline;
@@ -77,37 +60,18 @@ $blurb-margin: 9px;
         }
       }
     }
-
-    & .blocker {
-      content: "";
-      z-index: -1;
-      width: 100%;
-      height: 3000px;
-      background-color: $black;
-
-      position: absolute;
-
-      left: 0px;
-      &:nth-child(1) {
-        top: -3000px;
-      }
-
-      &:nth-child(3) {
-        top: 100%;
-      }
-    }
-
-    &::after {  // to create rounded blurbs
+  
+    &:after { // to create rounded blurbs
       z-index: -1;
       content: "";
       height: 100%;
       width: 100%;
       background-color: transparent;
-
+  
       position: absolute;
       top: 0px;
       left: 0px;
-
+  
       border-radius: $border-radius;
       box-shadow:
         // rounded corners
@@ -115,32 +79,25 @@ $blurb-margin: 9px;
         neg($blurb-margin) neg($blurb-margin) 0 0 $black,
         $blurb-margin $blurb-margin 0 0 $black,
         $blurb-margin neg($blurb-margin) 0 0 $black,
-
+  
         // vertical blockers for upward animation
         0px 150px 0 0 $black,
         0px -150px 0 0 $black,
         0px 300px 0 0 $black,
         0px -300px 0 0 $black,
-
+  
         // additional shadows for corner scraps
         neg($blurb-margin) 150px 0 0 $black,
         neg($blurb-margin) -150px 0 0 $black,
         $blurb-margin 150px 0 0 $black,
         $blurb-margin -150px 0 0 $black,
-
+  
         // if needed, add more w 300px y offset?
+        neg($blurb-margin) 300px 0 0 $black,
+        neg($blurb-margin) -300px 0 0 $black,
+        $blurb-margin 300px 0 0 $black,
+        $blurb-margin -300px 0 0 $black,
       ;
     }
   }
-
-  // .blurb:nth-child(1) {
-  //   transition: margin-top 1s ease-out;
-  // }
-  // .blurb:nth-child(3) {
-  //   transition: margin-top 1.5s ease-out;
-  // }
-  // .blurb:nth-child(5) {
-  //   transition: margin-top 2s ease-out;
-  // }
-  // * this creates the stagger using speed, rather than timing of start
 }

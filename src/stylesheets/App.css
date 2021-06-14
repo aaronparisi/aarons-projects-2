@@ -207,66 +207,43 @@ nav {
         height: 70%;
         max-height: 150px; }
 
-.about-blurbs {
-  display: flex;
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: center; }
-  .about-blurbs .spacer {
-    background: #0b1327;
-    flex-basis: 2%; }
-  .about-blurbs .blurb-container {
-    position: relative;
-    transition: margin-top 1s ease-out;
-    min-height: 200px;
-    height: max-content;
-    flex-basis: 33.33%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    .about-blurbs .blurb-container:first-child, .about-blurbs .blurb-container:nth-child(2) {
-      margin-right: 9px; }
-    .about-blurbs .blurb-container .blurb-body {
-      min-height: 200px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center; }
-      .about-blurbs .blurb-container .blurb-body .overlay {
+.blurb-container {
+  min-height: 200px;
+  overflow: visible;
+  flex-basis: 33.33%;
+  position: relative; }
+  .blurb-container:nth-child(2), .blurb-container:nth-child(3) {
+    margin-right: 9px; }
+  .blurb-container .blurb {
+    transition: top 1s ease-out;
+    position: absolute;
+    height: 100%;
+    width: 100%; }
+    .blurb-container .blurb .blurb-contents-container {
+      position: relative;
+      width: 100%; }
+      .blurb-container .blurb .blurb-contents-container .blurb-blocker {
         position: absolute;
         top: 0px;
         left: 0px;
         height: 100%;
         min-height: 200px;
         width: 100%;
-        background-color: #202020;
-        transition: opacity 1s ease-out, z-index 1s; }
-      .about-blurbs .blurb-container .blurb-body p {
+        background-color: #0b1327;
+        transition: opacity 2s ease-in, z-index 2s ease-in; }
+      .blurb-container .blurb .blurb-contents-container .blurb-text {
         text-align: left;
         padding: 10%;
         font-size: 20px;
         color: #0b1327; }
-        .about-blurbs .blurb-container .blurb-body p a {
+        .blurb-container .blurb .blurb-contents-container .blurb-text a {
           font-size: 20px;
           color: #001d25;
           font-weight: 300; }
-          .about-blurbs .blurb-container .blurb-body p a:hover {
+          .blurb-container .blurb .blurb-contents-container .blurb-text a:hover {
             cursor: pointer;
             text-decoration: underline; }
-    .about-blurbs .blurb-container .blocker {
-      content: "";
-      z-index: -1;
-      width: 100%;
-      height: 3000px;
-      background-color: #0b1327;
-      position: absolute;
-      left: 0px; }
-      .about-blurbs .blurb-container .blocker:nth-child(1) {
-        top: -3000px; }
-      .about-blurbs .blurb-container .blocker:nth-child(3) {
-        top: 100%; }
-    .about-blurbs .blurb-container::after {
+    .blurb-container .blurb:after {
       z-index: -1;
       content: "";
       height: 100%;
@@ -276,14 +253,14 @@ nav {
       top: 0px;
       left: 0px;
       border-radius: 5px;
-      box-shadow: -9px 9px 0 0 #0b1327, -9px -9px 0 0 #0b1327, 9px 9px 0 0 #0b1327, 9px -9px 0 0 #0b1327, 0px 150px 0 0 #0b1327, 0px -150px 0 0 #0b1327, 0px 300px 0 0 #0b1327, 0px -300px 0 0 #0b1327, -9px 150px 0 0 #0b1327, -9px -150px 0 0 #0b1327, 9px 150px 0 0 #0b1327, 9px -150px 0 0 #0b1327; }
+      box-shadow: -9px 9px 0 0 #0b1327, -9px -9px 0 0 #0b1327, 9px 9px 0 0 #0b1327, 9px -9px 0 0 #0b1327, 0px 150px 0 0 #0b1327, 0px -150px 0 0 #0b1327, 0px 300px 0 0 #0b1327, 0px -300px 0 0 #0b1327, -9px 150px 0 0 #0b1327, -9px -150px 0 0 #0b1327, 9px 150px 0 0 #0b1327, 9px -150px 0 0 #0b1327, -9px 300px 0 0 #0b1327, -9px -300px 0 0 #0b1327, 9px 300px 0 0 #0b1327, 9px -300px 0 0 #0b1327; }
 
 .about {
   background: #0b1327;
   min-height: 765px;
   overflow-y: hidden;
   color: #FFFFFF;
-  padding: 10%;
+  padding: 10% 5%;
   padding-top: 100px;
   display: flex;
   flex-direction: row;
@@ -294,9 +271,9 @@ nav {
   .about .about-intro, .about .about-blurbs-container {
     flex-basis: 50%;
     flex-grow: 1;
-    max-width: 1000px;
     min-width: 600px; }
   .about .about-intro {
+    max-width: 1000px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -321,42 +298,50 @@ nav {
         color: #99a3c0; }
   .about .about-blurbs-container {
     width: 100%;
-    height: fit-content;
+    overflow: visible;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
     z-index: 2;
-    margin-top: 3%; }
+    margin-top: 1%; }
     .about .about-blurbs-container .about-blurbs-gradient {
       z-index: -2;
       position: absolute;
       top: 0px;
       left: 0px;
-      height: 99.99%;
+      height: 200%;
       width: 99.99%;
       border-radius: 10px;
       background: radial-gradient(at top left, #E31475 0%, #ec964f); }
-  .about .about-footer {
+  .about .about-footer-container {
     flex-basis: 100%;
     flex-grow: 2;
     z-index: 2;
-    margin-bottom: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: margin-top 2s ease-out, opacity 3s cubic-bezier(1, -0.18, 1, 1); }
-    .about .about-footer h2 {
-      color: #FFFFFF; }
-    .about .about-footer .scroll-btn-container {
-      position: initial;
-      flex-direction: column-reverse; }
-      .about .about-footer .scroll-btn-container .bouncer {
-        transition: margin-top .5s ease-out;
-        margin-top: 30px; }
-      .about .about-footer .scroll-btn-container .bounced {
-        margin-top: 0px !important;
-        transition: margin-top 1s ease-in !important; }
-      .about .about-footer .scroll-btn-container a {
-        line-height: .5; }
+    overflow: visible;
+    position: absolute;
+    bottom: 1%;
+    height: 10%; }
+    .about .about-footer-container .about-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: margin-top 2s ease-out, opacity 3s cubic-bezier(1, -0.18, 1, 1); }
+      .about .about-footer-container .about-footer h2 {
+        color: #FFFFFF; }
+      .about .about-footer-container .about-footer .scroll-btn-container {
+        position: initial;
+        flex-direction: column-reverse; }
+        .about .about-footer-container .about-footer .scroll-btn-container .bouncer {
+          transition: margin-top .5s ease-out;
+          margin-top: 30px; }
+        .about .about-footer-container .about-footer .scroll-btn-container .bounced {
+          margin-top: 0px !important;
+          transition: margin-top 1s ease-in !important; }
+        .about .about-footer-container .about-footer .scroll-btn-container a {
+          line-height: .5; }
 
 .projects {
   background-color: #0b1327;

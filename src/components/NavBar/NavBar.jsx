@@ -70,7 +70,7 @@ const NavBar = props => {
     window.addEventListener('scroll', handleScroll)
 
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [prevScrollPos])
+  }, [prevScrollPos, curScrollPos])
 
   const barVisibleTransStyle = `top ${barTransTime / 1000}s ease-in, background-color ${barTransTime / 1000}s ease-in`
   const barNotVisibleTransStyle = `top ${barTransTime / 1000}s ease-out, background-color ${barTransTime / 1000}s ease-out`

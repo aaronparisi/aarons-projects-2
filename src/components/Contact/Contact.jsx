@@ -14,7 +14,16 @@ const Contact = props => {
   
   const [submitDisabled, setSubmitDisabled] = useState(true)
 
+  
   useEffect(() => {
+    const checkSubmitDisable = () => {
+      if (inputVals.email !== "" && inputVals.fromName !== "" && inputVals.msgBody !== "") {
+        setSubmitDisabled(false)
+      } else {
+        setSubmitDisabled(true)
+      }
+    }
+
     checkSubmitDisable()
   }, [inputVals])
 
@@ -36,16 +45,6 @@ const Contact = props => {
       setSubmitDisabled(true)
     } else {
       e.currentTarget.style=`background-color: ''`
-
-      checkSubmitDisable()
-    }
-  }
-
-  const checkSubmitDisable = () => {
-    if (inputVals.email !== "" && inputVals.fromName !== "" && inputVals.msgBody !== "") {
-      setSubmitDisabled(false)
-    } else {
-      setSubmitDisabled(true)
     }
   }
 

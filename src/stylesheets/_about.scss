@@ -14,7 +14,7 @@ $intro-text-height: 40vh;
 
   color: $white;
 
-  padding: 10%;
+  padding: 10% 5%;
   padding-top: $nav-height;
 
   display: flex;
@@ -29,11 +29,12 @@ $intro-text-height: 40vh;
   .about-intro, .about-blurbs-container {
     flex-basis: 50%;
     flex-grow: 1;
-    max-width: 1000px;
     min-width: 600px;
   }
 
   .about-intro {
+    max-width: 1000px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -68,17 +69,23 @@ $intro-text-height: 40vh;
 
   .about-blurbs-container {
     width: 100%;
-    height: fit-content;
+    overflow: visible;
     position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+
     z-index: 2;
-    margin-top: 3%;
+    margin-top: 1%;
 
     .about-blurbs-gradient {
       z-index: -2;
       position: absolute;
       top: 0px;
       left: 0px;
-      height: 99.99%;
+      height: 200%;  // * this is for blurb animation to not "swipe"
       width: 99.99%;
 
       border-radius: 10px;
@@ -87,39 +94,45 @@ $intro-text-height: 40vh;
     }
   }
 
-  .about-footer {
+  .about-footer-container {
     flex-basis: 100%;
     flex-grow: 2;
     z-index: 2;
 
-    margin-bottom: 5%;
+    overflow: visible;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    bottom: 1%;
+    height: 10%;
 
-    transition: margin-top 2s ease-out, opacity 3s cubic-bezier(1, -0.18, 1, 1);
-
-    & h2 {
-      color: $white;
-    }
-    
-    .scroll-btn-container {
-      position: initial;
-      flex-direction: column-reverse;;
+    & .about-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      transition: margin-top 2s ease-out, opacity 3s cubic-bezier(1, -0.18, 1, 1);
+  
+      & h2 {
+        color: $white;
+      }
       
-      & .bouncer {
-        transition: margin-top .5s ease-out;
-        margin-top: 30px;
-      }
-      & .bounced {
-        margin-top: 0px !important;
-        transition: margin-top 1s ease-in !important;
-      }
-
-      & a {
-        line-height: .5;
+      .scroll-btn-container {
+        position: initial;
+        flex-direction: column-reverse;;
+        
+        & .bouncer {
+          transition: margin-top .5s ease-out;
+          margin-top: 30px;
+        }
+        & .bounced {
+          margin-top: 0px !important;
+          transition: margin-top 1s ease-in !important;
+        }
+  
+        & a {
+          line-height: .5;
+        }
       }
     }
   }

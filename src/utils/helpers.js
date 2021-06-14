@@ -48,3 +48,23 @@ export function useOnScreen({ root = null }) {
 
   return [setNode, entry]
 }
+
+const getWinWidth = () => {
+  const { innerWidth: width } = window;
+  return width;
+}
+
+export const useWinWidth = () => {
+  const [winWidth, setWinWidth] = useState(getWinWidth())
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWinWidth(getWinWidth())
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  return winWidth
+}

@@ -11,10 +11,14 @@ const StyledDiv = styled.div`
 `
 
 const About = props => {
-  const blurbVisibleMargin = '10px';
+  const blurbVisibleMargin = '0px';
   const blurbHiddenMargin = '100px'
-  const footerVisibleMargin = '4vh'
+  const footerVisibleMargin = '0%'
   const footerHiddenMargin = '500px'
+
+  const blurb2Timeout = 500;
+  const blurb3Timeout = 1000;
+  const footerTimeout = 1500;
 
   const [blurb1, setBlurb1] = useState({
     margin: blurbHiddenMargin,
@@ -39,61 +43,61 @@ const About = props => {
     
   })
 
-  const toggleBlurbStates = () => {
-    if (animated) return;
-
-    if (entry.intersectionRatio > 0) {
-      setBlurb1({
-        margin: blurbVisibleMargin,
-        overlayOpacity: '0'
-      })
-
-      setTimeout(() => {
-        setBlurb2({
-          margin: blurbVisibleMargin,
-          overlayOpacity: '0'
-        })
-      }, 250);
-
-      setTimeout(() => {
-        setBlurb3({
-          margin: blurbVisibleMargin,
-          overlayOpacity: '0'
-        })
-      }, 500);
-
-      setTimeout(() => {
-        setFooterStyles({
-          margin: footerVisibleMargin,
-          opacity: '1'
-        })
-      }, 750);
-
-      setAnimated(true)  // * uncomment to limit animation to 1 time
-    } else {
-      // ! if we only animate one time this else condition is unnecessary
-      setBlurb1({
-        margin: blurbHiddenMargin,
-        overlayOpacity: '1'
-      })
-      setBlurb2({
-        margin: blurbHiddenMargin,
-        overlayOpacity: '1'
-      })
-      setBlurb3({
-        margin: blurbHiddenMargin,
-        overlayOpacity: '1'
-      })
-      setFooterStyles({
-        margin: footerHiddenMargin,
-        opacity: '0'
-      })
-    }
-  }
-
   useEffect(() => {
+    const toggleBlurbStates = () => {
+      if (animated) return;
+  
+      if (entry.intersectionRatio > 0) {
+        setBlurb1({
+          margin: blurbVisibleMargin,
+          overlayOpacity: '0'
+        })
+  
+        setTimeout(() => {
+          setBlurb2({
+            margin: blurbVisibleMargin,
+            overlayOpacity: '0'
+          })
+        }, blurb2Timeout);
+  
+        setTimeout(() => {
+          setBlurb3({
+            margin: blurbVisibleMargin,
+            overlayOpacity: '0'
+          })
+        }, blurb3Timeout);
+  
+        setTimeout(() => {
+          setFooterStyles({
+            margin: footerVisibleMargin,
+            opacity: '1'
+          })
+        }, footerTimeout);
+  
+        // setAnimated(true)  // * uncomment to limit animation to 1 time
+      } else {
+        // ! if we only animate one time this else condition is unnecessary
+        setBlurb1({
+          margin: blurbHiddenMargin,
+          overlayOpacity: '1'
+        })
+        setBlurb2({
+          margin: blurbHiddenMargin,
+          overlayOpacity: '1'
+        })
+        setBlurb3({
+          margin: blurbHiddenMargin,
+          overlayOpacity: '1'
+        })
+        setFooterStyles({
+          margin: footerHiddenMargin,
+          opacity: '0'
+        })
+      }
+    }
+
     toggleBlurbStates()
-  }, [entry.intersectionRatio])
+  }, [entry.intersectionRatio, animated])
   
   return (
     <div className="about" id="about" data-nav="show">
@@ -109,38 +113,35 @@ const About = props => {
 
       <div className="about-blurbs-container" ref={ref}>
         <div className="about-blurbs-gradient"></div>
-        <div className="about-blurbs">
-          <StyledDiv className="blurb-container" margin={blurb1.margin} >
-            <BlurbContainer
-              overlayOpacity={blurb1.overlayOpacity} 
-              text={<p>It started when I was teaching AP Calculus BC, Multivariable Calculus, and Statistics at <a href="https://www.salisburyschool.org/">Salisbury School</a> on a whiteboard.  Vector integrals are really hard to hand-draw.</p>}
-            />
-          </StyledDiv>
 
-          <StyledDiv className="blurb-container" margin={blurb2.margin} >
-            <BlurbContainer 
-              overlayOpacity={blurb2.overlayOpacity} 
-              text={<p>Then I worked a job at a <a href="https://www.1031services.com/">real estate exchange company</a> whose database software had some, er... quirks.  As in, click a link to a client's file and end up at a different client's file... or no client at all!</p>}
-            />
-          </StyledDiv>
+        <BlurbContainer
+          overlayOpacity={blurb1.overlayOpacity}
+          top={blurb1.margin}
+          text={<p className="blurb-text">It started when I was teaching AP Calculus BC, Multivariable Calculus, and Statistics at <a href="https://www.salisburyschool.org/">Salisbury School</a> on a whiteboard.  Vector integrals are really hard to hand-draw.</p>}
+        />
 
-          <StyledDiv className="blurb-container" margin={blurb3.margin} >
-            <BlurbContainer  
-              overlayOpacity={blurb3.overlayOpacity} 
-              text={<p>Finally it dawned on me - I really want to make software that's easy to use, looks nice, and actually works.  With the help of <a href="https://open.appacademy.io/">appAcademy</a>, now I can do that.</p>}
-            />
-          </StyledDiv>
+        <BlurbContainer 
+          overlayOpacity={blurb2.overlayOpacity} 
+          top={blurb2.margin}
+          text={<p className="blurb-text">Then I worked a job at a <a href="https://www.1031services.com/">real estate exchange company</a> whose database software had some, er... quirks.  As in, click a link to a client's file and end up at a different client's file... or no client at all!</p>}
+        />
 
-        </div>
+        <BlurbContainer  
+          overlayOpacity={blurb3.overlayOpacity} 
+          top={blurb3.margin}
+          text={<p className="blurb-text">Finally it dawned on me - I really want to make software that's easy to use, looks nice, and actually works.  With the help of <a href="https://open.appacademy.io/">appAcademy</a>, now I can do that.</p>}
+        />
       </div>
 
-      <StyledDiv className="about-footer" margin={footerStyles.margin} opacity={footerStyles.opacity} >
-        <h2>Check out some of my projects!</h2>
-        <div className="scroll-btn-container">
-          {/* <a className="bouncer" id="bouncer-about" href="#projects">&or;</a> */}
-          <a id="bouncer-about" href="#projects">&or;</a>
-        </div>
-      </StyledDiv>
+      <div className="about-footer-container">
+        <StyledDiv className="about-footer" margin={footerStyles.margin} opacity={footerStyles.opacity} >
+          <h2>Check out some of my projects!</h2>
+          <div className="scroll-btn-container">
+            {/* <a className="bouncer" id="bouncer-about" href="#projects">&or;</a> */}
+            <a id="bouncer-about" href="#projects">&or;</a>
+          </div>
+        </StyledDiv>
+      </div>
     </div>
   );
 }
