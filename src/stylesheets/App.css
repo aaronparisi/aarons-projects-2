@@ -320,7 +320,7 @@ nav {
     flex-basis: 100%;
     flex-grow: 2;
     z-index: 2;
-    margin-top: 5%;
+    margin: 5% 0%;
     overflow: visible;
     position: relative;
     height: 10%;
@@ -329,7 +329,7 @@ nav {
     justify-content: center;
     align-items: center; }
     .about .about-footer-container .about-footer-flex-container {
-      width: 37%;
+      width: 350.86px;
       position: relative;
       height: 20px; }
       .about .about-footer-container .about-footer-flex-container .about-footer {

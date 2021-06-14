@@ -24,13 +24,15 @@ const Blurb = ({ overlayOpacity, text, top }) => {
   useEffect(() => {
     const child = blurbRef.current
     setContainerHeight(child.offsetHeight)
-  }, [])
-
+    console.log('set container height')
+  }, [text])
+// todo there are LOT of renders on reload
   useEffect(() => {
     const child = blurbRef.current
     setContainerHeight(child.offsetHeight)
   }, [winWidth, containerHeight])
 
+  console.log('rendering')
   return (
     <HeightDiv className="blurb-container" height={containerHeight}>
       <ContainerDiv className="blurb" top={top}>
