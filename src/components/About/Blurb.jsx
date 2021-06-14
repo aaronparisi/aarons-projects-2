@@ -5,6 +5,7 @@ import { useWinWidth } from '../../utils/helpers';
 
 const ContainerDiv = styled.div`
   top: ${ ({ top }) => top };
+  height: ${ ({ elHeight }) => elHeight }px;
 `
 
 const BlockerDiv = styled.div`
@@ -13,7 +14,7 @@ const BlockerDiv = styled.div`
 `
 
 const HeightDiv = styled.div`
-  height: ${ ({ height }) => height }px;
+  height: ${ ({ elHeight }) => elHeight }px;
 `
 
 const Blurb = ({ overlayOpacity, text, top }) => {
@@ -34,14 +35,14 @@ const Blurb = ({ overlayOpacity, text, top }) => {
 
   console.log('rendering')
   return (
-    <HeightDiv className="blurb-container" height={containerHeight}>
-      <ContainerDiv className="blurb" top={top}>
-        <HeightDiv className="blurb-contents-container" height={containerHeight}>
+    <ContainerDiv className="blurb-container" elHeight={containerHeight}>
+      <ContainerDiv className="blurb" top={top} elHeight={containerHeight}>
+        <ContainerDiv className="blurb-contents-container" elHeight={containerHeight}>
           <div ref={blurbRef}>{text}</div>
           <BlockerDiv opacity={overlayOpacity} className="blurb-blocker"></BlockerDiv>
-        </HeightDiv>
+        </ContainerDiv>
       </ContainerDiv>
-    </HeightDiv>
+    </ContainerDiv>
   )
 }
 

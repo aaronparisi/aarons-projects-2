@@ -14,6 +14,8 @@ $blurb-margin: 9px;
   overflow: visible;
   
   flex-basis: 33.33%;
+  flex-grow: 1;
+  min-width: 202px;
   position: relative;
 
   &:nth-child(2), &:nth-child(3) {
@@ -24,7 +26,7 @@ $blurb-margin: 9px;
     transition: top $blurb-transition-speed ease-out;
 
     position: absolute;
-    height: 100%;
+    // height: 100%;
     width: 100%;
   
     .blurb-contents-container {
@@ -102,6 +104,51 @@ $blurb-margin: 9px;
         neg($blurb-margin) -450px 0 0 $black,
         $blurb-margin 450px 0 0 $black,
         $blurb-margin -450px 0 0 $black,
+      ;
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .blurb-container {
+    width: 100%;
+    flex-basis: auto;
+    margin: 4.5px 0% !important;
+
+    & .blurb {
+      top: 0px !important;
+    }
+
+    & .blurb:after {
+      box-shadow:
+        // rounded corners
+        neg($blurb-margin) $blurb-margin 0 0 $black,
+        neg($blurb-margin) neg($blurb-margin) 0 0 $black,
+        $blurb-margin $blurb-margin 0 0 $black,
+        $blurb-margin neg($blurb-margin) 0 0 $black,
+  
+        // vertical blockers for upward animation
+        // 0px 150px 0 0 $black,
+        // 0px -150px 0 0 $black,
+        // 0px 300px 0 0 $black,
+        // 0px -300px 0 0 $black,
+  
+        // // additional shadows for corner scraps
+        // neg($blurb-margin) 150px 0 0 $black,
+        // neg($blurb-margin) -150px 0 0 $black,
+        // $blurb-margin 150px 0 0 $black,
+        // $blurb-margin -150px 0 0 $black,
+  
+        // // if needed, add more w 300px y offset?
+        // neg($blurb-margin) 300px 0 0 $black,
+        // neg($blurb-margin) -300px 0 0 $black,
+        // $blurb-margin 300px 0 0 $black,
+        // $blurb-margin -300px 0 0 $black,
+  
+        // neg($blurb-margin) 450px 0 0 $black,
+        // neg($blurb-margin) -450px 0 0 $black,
+        // $blurb-margin 450px 0 0 $black,
+        // $blurb-margin -450px 0 0 $black,
       ;
     }
   }

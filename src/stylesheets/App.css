@@ -212,13 +212,14 @@ nav {
   min-height: 200px;
   overflow: visible;
   flex-basis: 33.33%;
+  flex-grow: 1;
+  min-width: 202px;
   position: relative; }
   .blurb-container:nth-child(2), .blurb-container:nth-child(3) {
     margin-right: 9px; }
   .blurb-container .blurb {
     transition: top 1s ease-out;
     position: absolute;
-    height: 100%;
     width: 100%; }
     .blurb-container .blurb .blurb-contents-container {
       position: relative;
@@ -256,6 +257,15 @@ nav {
       border-radius: 5px;
       box-shadow: -9px 9px 0 0 #0b1327, -9px -9px 0 0 #0b1327, 9px 9px 0 0 #0b1327, 9px -9px 0 0 #0b1327, 0px 150px 0 0 #0b1327, 0px -150px 0 0 #0b1327, 0px 300px 0 0 #0b1327, 0px -300px 0 0 #0b1327, -9px 150px 0 0 #0b1327, -9px -150px 0 0 #0b1327, 9px 150px 0 0 #0b1327, 9px -150px 0 0 #0b1327, -9px 300px 0 0 #0b1327, -9px -300px 0 0 #0b1327, 9px 300px 0 0 #0b1327, 9px -300px 0 0 #0b1327, -9px 450px 0 0 #0b1327, -9px -450px 0 0 #0b1327, 9px 450px 0 0 #0b1327, 9px -450px 0 0 #0b1327; }
 
+@media screen and (max-width: 730px) {
+  .blurb-container {
+    width: 100%;
+    flex-basis: auto;
+    margin: 4.5px 0% !important; }
+    .blurb-container .blurb {
+      top: 0px !important; }
+    .blurb-container .blurb:after {
+      box-shadow: -9px 9px 0 0 #0b1327, -9px -9px 0 0 #0b1327, 9px 9px 0 0 #0b1327, 9px -9px 0 0 #0b1327; } }
 .about {
   background: #0b1327;
   min-height: 765px;
@@ -353,6 +363,16 @@ nav {
             .about .about-footer-container .about-footer-flex-container .about-footer .scroll-btn-container a:hover {
               color: #E31475; }
 
+@media screen and (max-width: 730px) {
+  .about .about-intro {
+    flex-direction: column; }
+  .about .about-blurbs-container {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    min-width: 0px; }
+    .about .about-blurbs-container .about-blurbs-gradient {
+      height: 100%; } }
 .projects {
   background-color: #0b1327;
   padding-top: 100px;

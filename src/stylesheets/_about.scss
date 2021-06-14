@@ -153,3 +153,23 @@ $intro-text-height: 40vh;
     }
   }
 }
+
+@media screen and (max-width: 730px) {
+  .about {
+    & .about-intro {
+      flex-direction: column;
+    }
+    
+    & .about-blurbs-container {
+      flex-direction: column;
+      align-items: center;
+      width: 95%;
+      min-width: 0px;
+
+      & .about-blurbs-gradient {
+        height: 100%;
+      }
+  
+    }
+  }
+}
