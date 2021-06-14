@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import BlurbContainer from './BlurbContainer'
 import HeadshotContainer from './HeadshotContainer'
+import Bouncer from '../bouncer';
 
 const StyledDiv = styled.div`
   margin-top: ${ ({ margin }) => margin };
@@ -19,6 +20,8 @@ const About = props => {
   const blurb2Timeout = 500;
   const blurb3Timeout = 1000;
   const footerTimeout = 1500;
+
+  const [bouncerClass, setBouncerClass] = useState('')
 
   const [blurb1, setBlurb1] = useState({
     margin: blurbHiddenMargin,
@@ -73,6 +76,10 @@ const About = props => {
             opacity: '1'
           })
         }, footerTimeout);
+
+        setTimeout(() => {
+          setBouncerClass('bouncer')
+        }, (footerTimeout*2))
   
         // setAnimated(true)  // * uncomment to limit animation to 1 time
       } else {
@@ -93,6 +100,7 @@ const About = props => {
           margin: footerHiddenMargin,
           opacity: '0'
         })
+        setBouncerClass('')
       }
     }
 
@@ -136,10 +144,7 @@ const About = props => {
       <div className="about-footer-container">
         <StyledDiv className="about-footer" margin={footerStyles.margin} opacity={footerStyles.opacity} >
           <h2>Check out some of my projects!</h2>
-          <div className="scroll-btn-container">
-            {/* <a className="bouncer" id="bouncer-about" href="#projects">&or;</a> */}
-            <a id="bouncer-about" href="#projects">&or;</a>
-          </div>
+          <Bouncer className={bouncerClass} id={'about-bouncer'} />
         </StyledDiv>
       </div>
     </div>

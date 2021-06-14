@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroImage from '../../images/2-person-workstation.jpeg'
+import Bouncer from '../bouncer';
 
 const Home = props => {
   
@@ -9,9 +10,7 @@ const Home = props => {
 
       <div className="hero-text">
         <h1>Web applications even my parents could use.</h1>
-        <div className="scroll-btn-container">
-          <a className="bouncer" href="#about">&or;</a>
-        </div>
+        <Bouncer className={"bouncer"} id={"hero-bouncer"} />
       </div>
 
     </div>

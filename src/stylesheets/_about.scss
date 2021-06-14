@@ -116,23 +116,9 @@ $intro-text-height: 40vh;
       & h2 {
         color: $white;
       }
-      
-      .scroll-btn-container {
-        position: initial;
-        flex-direction: column-reverse;;
-        
-        & .bouncer {
-          transition: margin-top .5s ease-out;
-          margin-top: 30px;
-        }
-        & .bounced {
-          margin-top: 0px !important;
-          transition: margin-top 1s ease-in !important;
-        }
-  
-        & a {
-          line-height: .5;
-        }
+
+      & .scroll-btn-container {
+        margin-bottom: -8%;
       }
     }
   }
