@@ -345,6 +345,13 @@ nav {
           color: #FFFFFF; }
         .about .about-footer-container .about-footer-flex-container .about-footer .scroll-btn-container {
           margin-bottom: -25%; }
+          .about .about-footer-container .about-footer-flex-container .about-footer .scroll-btn-container a {
+            font-size: 64px;
+            color: #FFFFFF;
+            margin-bottom: 0px;
+            transition: margin-bottom .5s ease-in; }
+            .about .about-footer-container .about-footer-flex-container .about-footer .scroll-btn-container a:hover {
+              color: #E31475; }
 
 .projects {
   background-color: #0b1327;

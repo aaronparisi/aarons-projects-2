@@ -136,6 +136,18 @@ $intro-text-height: 40vh;
   
         & .scroll-btn-container {
           margin-bottom: -25%;
+
+          & a {
+            font-size: $font-size-large;
+            color: $white;
+          
+            margin-bottom: 0px;
+            transition: margin-bottom .5s ease-in;
+          
+            &:hover {
+              color: $orange;
+            }
+          }
         }
       }
     }
