@@ -142,10 +142,12 @@ const About = props => {
       </div>
 
       <div className="about-footer-container">
-        <StyledDiv className="about-footer" margin={footerStyles.margin} opacity={footerStyles.opacity} >
-          <h2>Check out some of my projects!</h2>
-          <Bouncer className={bouncerClass} id={'about-bouncer'} href={"#projects"} />
-        </StyledDiv>
+        <div className="about-footer-flex-container">
+            <StyledDiv className="about-footer" margin={footerStyles.margin} opacity={footerStyles.opacity} >
+              <h2>Check out some of my projects!</h2>
+              <Bouncer className={bouncerClass} id={'about-bouncer'} href={"#projects"} />
+            </StyledDiv>
+        </div>
       </div>
     </div>
   );

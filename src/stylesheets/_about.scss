@@ -96,29 +96,47 @@ $intro-text-height: 40vh;
 
   .about-footer-container {
     flex-basis: 100%;
+
     flex-grow: 2;
     z-index: 2;
 
+    margin-top: 5%;
+
     overflow: visible;
 
-    position: absolute;
-    bottom: 1%;
+    position: relative;
     height: 10%;
 
-    & .about-footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-  
-      transition: margin-top 2s ease-out, opacity 3s cubic-bezier(1, -0.18, 1, 1);
-  
-      & h2 {
-        color: $white;
-      }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-      & .scroll-btn-container {
-        margin-bottom: -8%;
+    .about-footer-flex-container {
+      width: 37%;
+      position: relative;
+
+      height: 20px;
+
+      & .about-footer {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        transition: margin-top 2s ease-out, opacity 3s cubic-bezier(1, -0.18, 1, 1);
+    
+        & h2 {
+          color: $white;
+        }
+  
+        & .scroll-btn-container {
+          margin-bottom: -25%;
+        }
       }
     }
   }
