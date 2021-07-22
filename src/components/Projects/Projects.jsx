@@ -2,6 +2,7 @@ import React from 'react'
 import ProjectTileContainer from './ProjectTileContainer'
 import BlankTileContainer from './BlankTileContainer'
 
+import Coupons from '../../thumbnails/coupons.png'
 import Marge from '../../thumbnails/marge.png'
 import TicTacToe from '../../thumbnails/TicTacToe.png'
 import Todos from '../../thumbnails/Todos.png'
@@ -16,6 +17,14 @@ const Projects = props => {
 
   return (
     <div className="projects" id="projects" data-nav="show">
+      <ProjectTileContainer
+        title="Coupon Vision"
+        imageUrl={Coupons}
+        pageUrl="https://www.coupons.aaronparisidev.com"
+        gitUrl="https://github.com/aaronparisi/CouponVision-api.git"
+        description="See how much YOU can save!!"
+        techs={["Rails", "React", "Redux", "D3", "SVG", "Axios"]}
+      />
       <ProjectTileContainer
         title="Springfield BnB"
         imageUrl={Marge}

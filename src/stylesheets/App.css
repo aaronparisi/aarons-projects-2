@@ -98,7 +98,7 @@ nav {
   height: 101px;
   min-height: 101px;
   margin-top: -100px;
-  background: linear-gradient(to right, #E31475 1%, #ffee00); }
+  background: linear-gradient(to right, #E31475 0%, #ec964f); }
 
 .hero {
   margin-top: -100px;
@@ -621,6 +621,6 @@ a {
 .icon {
   filter: invert(18%) sepia(95%) saturate(4602%) hue-rotate(322deg) brightness(91%) contrast(95%) !important; }
   .icon:hover {
-    filter: invert(82%) sepia(100%) saturate(1665%) hue-rotate(344deg) brightness(96%) contrast(115%) !important; }
+    filter: invert(85%) sepia(22%) saturate(7174%) hue-rotate(359deg) brightness(104%) contrast(105%) !important; }
 
 /*# sourceMappingURL=App.css.map */

@@ -47,60 +47,68 @@ const About = props => {
   })
 
   useEffect(() => {
+    const resetBlurbs = () => {
+      // ! if we only animate one time this else condition is unnecessary
+      setBlurb1({
+        margin: blurbHiddenMargin,
+        overlayOpacity: '1'
+      })
+      setBlurb2({
+        margin: blurbHiddenMargin,
+        overlayOpacity: '1'
+      })
+      setBlurb3({
+        margin: blurbHiddenMargin,
+        overlayOpacity: '1'
+      })
+      setFooterStyles({
+        margin: footerHiddenMargin,
+        opacity: '0'
+      })
+      setBouncerClass('')
+    }
+
+    const animateBlurbs = () => {
+      setBlurb1({
+        margin: blurbVisibleMargin,
+        overlayOpacity: '0'
+      })
+
+      setTimeout(() => {
+        setBlurb2({
+          margin: blurbVisibleMargin,
+          overlayOpacity: '0'
+        })
+      }, blurb2Timeout);
+
+      setTimeout(() => {
+        setBlurb3({
+          margin: blurbVisibleMargin,
+          overlayOpacity: '0'
+        })
+      }, blurb3Timeout);
+
+      setTimeout(() => {
+        setFooterStyles({
+          margin: footerVisibleMargin,
+          opacity: '1'
+        })
+      }, footerTimeout);
+
+      setTimeout(() => {
+        setBouncerClass('bouncer')
+      }, (footerTimeout*2))
+
+      // setAnimated(true)  // * uncomment to limit animation to 1 time
+    }
+    
     const toggleBlurbStates = () => {
       if (animated) return;
   
       if (entry.intersectionRatio > 0) {
-        setBlurb1({
-          margin: blurbVisibleMargin,
-          overlayOpacity: '0'
-        })
-  
-        setTimeout(() => {
-          setBlurb2({
-            margin: blurbVisibleMargin,
-            overlayOpacity: '0'
-          })
-        }, blurb2Timeout);
-  
-        setTimeout(() => {
-          setBlurb3({
-            margin: blurbVisibleMargin,
-            overlayOpacity: '0'
-          })
-        }, blurb3Timeout);
-  
-        setTimeout(() => {
-          setFooterStyles({
-            margin: footerVisibleMargin,
-            opacity: '1'
-          })
-        }, footerTimeout);
-
-        setTimeout(() => {
-          setBouncerClass('bouncer')
-        }, (footerTimeout*2))
-  
-        // setAnimated(true)  // * uncomment to limit animation to 1 time
+        animateBlurbs()
       } else {
-        // ! if we only animate one time this else condition is unnecessary
-        setBlurb1({
-          margin: blurbHiddenMargin,
-          overlayOpacity: '1'
-        })
-        setBlurb2({
-          margin: blurbHiddenMargin,
-          overlayOpacity: '1'
-        })
-        setBlurb3({
-          margin: blurbHiddenMargin,
-          overlayOpacity: '1'
-        })
-        setFooterStyles({
-          margin: footerHiddenMargin,
-          opacity: '0'
-        })
-        setBouncerClass('')
+        resetBlurbs()
       }
     }
 

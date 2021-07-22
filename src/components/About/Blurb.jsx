@@ -13,10 +13,6 @@ const BlockerDiv = styled.div`
   z-index: ${ ({ opacity}) => (opacity === '1' ? '1' : '-3') };
 `
 
-const HeightDiv = styled.div`
-  height: ${ ({ elHeight }) => elHeight }px;
-`
-
 const Blurb = ({ overlayOpacity, text, top }) => {
   const [containerHeight, setContainerHeight] = useState(0)
   const blurbRef = useRef()
@@ -27,6 +23,7 @@ const Blurb = ({ overlayOpacity, text, top }) => {
     setContainerHeight(child.offsetHeight)
     console.log('set container height')
   }, [text])
+  
 // todo there are LOT of renders on reload
   useEffect(() => {
     const child = blurbRef.current
