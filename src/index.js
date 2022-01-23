@@ -10,7 +10,7 @@ import { createBrowserHistory } from 'history'
 import axios from 'axios'
 
 // this doesn't really matter for an app that has no back end...
-const baseUrl = (process.env.NODE_ENV === 'production') ? 'https://aaronparisidev.com' : 'http://localhost:3000'
+const baseUrl = (process.env.NODE_ENV === 'production') ? 'https://aaronparisi.dev' : 'http://localhost:3000'
 export const axiosIns =  axios.create({
   baseURL: baseUrl,
   withCredentials: true

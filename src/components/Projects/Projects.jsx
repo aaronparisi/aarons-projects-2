@@ -20,7 +20,7 @@ const Projects = props => {
       <ProjectTileContainer
         title="Coupon Vision"
         imageUrl={Coupons}
-        pageUrl="https://www.coupons.aaronparisidev.com"
+        pageUrl="https://www.coupons.aaronparisi.dev"
         gitUrl="https://github.com/aaronparisi/CouponVision-api.git"
         description="See how much YOU can save!!"
         techs={["Rails", "React", "Redux", "D3", "SVG", "Axios"]}
@@ -28,7 +28,7 @@ const Projects = props => {
       <ProjectTileContainer
         title="Springfield BnB"
         imageUrl={Marge}
-        pageUrl="http://www.springfield-bnb.aaronparisidev.com"
+        pageUrl="http://www.springfield-bnb.aaronparisi.dev"
         gitUrl="https://github.com/aaronparisi/Springfield-BnB-Frontend.git"
         description="I hear the Springfield Power Plant is lovely this time of year."
         techs={["Rails", "React", "Redux", "Amazon S3 Storage", "Axios"]}
@@ -36,7 +36,7 @@ const Projects = props => {
       <ProjectTileContainer
         title="Candie's Swingin' 70th"
         imageUrl={Candie}
-        pageUrl="http://www.candies-70th.aaronparisidev.com/1"
+        pageUrl="http://www.candies-70th.aaronparisi.dev/1"
         gitUrl="https://github.com/aaronparisi/candies-70th-frontend"
         description="Happy birthday dear best-friend's-mommmmm 🎶"
         techs={["React"]}
@@ -44,7 +44,7 @@ const Projects = props => {
       <ProjectTileContainer
         title="Developer Portfolio 1.0"
         imageUrl={Portfolio1}
-        pageUrl="http://www.v1.aaronparisidev.com"
+        pageUrl="http://www.v1.aaronparisi.dev"
         gitUrl="https://github.com/aaronparisi/aarons-projects"
         description="My first stab at my personal website"
         techs={["React"]}
@@ -52,7 +52,7 @@ const Projects = props => {
       <ProjectTileContainer
         title="Jeerkat Clock"
         imageUrl={Jeerkat}
-        pageUrl="http://www.jeerkat-js.aaronparisidev.com"
+        pageUrl="http://www.jeerkat-js.aaronparisi.dev"
         gitUrl="https://github.com/aaronparisi/JS-Jeerkat-Clock"
         description="Schedule your day with these vanilla JavaScript critters!"
         techs={["JavaScript"]}
@@ -61,7 +61,7 @@ const Projects = props => {
         title="Todos"
         imageUrl={Todos}
         // pageUrl="https://aarons-todos.herokuapp.com/"
-        pageUrl="http://www.todos.aaronparisidev.com"
+        pageUrl="http://www.todos.aaronparisi.dev"
         gitUrl="https://github.com/aaronparisi/Todo-List-Rails-React-Redux"
         description="Check out this site... It is your destiny."
         techs={["Rails", "React", "Redux", "PostgreSQL", "Webpacker"]}
@@ -70,7 +70,7 @@ const Projects = props => {
       <ProjectTileContainer
         title="Frontend Auth"
         imageUrl={Bluebird}
-        pageUrl="https://www.frontend-auth.aaronparisidev.com/"
+        pageUrl="https://www.frontend-auth.aaronparisi.dev/"
         gitUrl="https://github.com/aaronparisi/front-end-auth-demo-frontend"
         description="Is THIS why the birds are so angry??"
         techs={["Rails6", "React", "Redux", "PostgreSQL"]}
@@ -78,8 +78,8 @@ const Projects = props => {
       <ProjectTileContainer
         title="Towers of Hanoi"
         imageUrl={Towers}
-        pageUrl="https://www.towers.aaronparisidev.com/"
-        // pageUrl="http://www.towers.aaronparisidev.com"
+        pageUrl="https://www.towers.aaronparisi.dev/"
+        // pageUrl="http://www.towers.aaronparisi.dev"
         gitUrl="https://github.com/aaronparisi/Towers-of-Hanoi-jQuery"
         description="Are you smarter than a boot-camper?  How about a recursive demo??"
         techs={["jQuery"]}
@@ -88,7 +88,7 @@ const Projects = props => {
         title="TicTacToe"
         imageUrl={TicTacToe}
         // pageUrl="https://tictactoe-32141.web.app/"
-        pageUrl="https://www.tictactoe.aaronparisidev.com"
+        pageUrl="https://www.tictactoe.aaronparisi.dev"
         gitUrl="https://github.com/aaronparisi/TicTacToe"
         description="No cheating allowed (or possible)"
         techs={["Ruby", "JavaScript"]}
@@ -96,7 +96,7 @@ const Projects = props => {
       {/* <ProjectTileContainer
         title="Minesweeper"
         imageUrl={Minesweeper}
-        pageUrl="https://www.minesweeper.aaronparisidev.com"
+        pageUrl="https://www.minesweeper.aaronparisi.dev"
         gitUrl="https://github.com/aaronparisi/Minesweeper"
         description="I finally understand how this game works"
         techs={["Ruby", "JavaScript"]}
