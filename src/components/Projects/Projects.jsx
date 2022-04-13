@@ -1,20 +1,19 @@
-import React from 'react'
-import ProjectTileContainer from './ProjectTileContainer'
-import BlankTileContainer from './BlankTileContainer'
+import React from "react";
+import ProjectTileContainer from "./ProjectTileContainer";
+import BlankTileContainer from "./BlankTileContainer";
 
-import Coupons from '../../thumbnails/coupons.png'
-import Marge from '../../thumbnails/marge.png'
-import TicTacToe from '../../thumbnails/TicTacToe.png'
-import Todos from '../../thumbnails/Todos.png'
-import Towers from '../../thumbnails/Towers.png'
-import Bluebird from '../../thumbnails/bluebird.png'
-import Candie from '../../thumbnails/candie.png'
-import Jeerkat from '../../thumbnails/jeerkat.png'
-import Minesweeper from '../../thumbnails/minesweeper.png'
-import Portfolio1 from '../../thumbnails/portfolio1.png'
+import Coupons from "../../thumbnails/coupons.png";
+import Marge from "../../thumbnails/marge.png";
+import TicTacToe from "../../thumbnails/TicTacToe.png";
+import Todos from "../../thumbnails/Todos.png";
+import Towers from "../../thumbnails/Towers.png";
+import Bluebird from "../../thumbnails/bluebird.png";
+import Candie from "../../thumbnails/candie.png";
+import Jeerkat from "../../thumbnails/jeerkat.png";
+import Minesweeper from "../../thumbnails/minesweeper.png";
+import Portfolio1 from "../../thumbnails/portfolio1.png";
 
-const Projects = props => {
-
+const Projects = (props) => {
   return (
     <div className="projects" id="projects" data-nav="show">
       <ProjectTileContainer
@@ -25,14 +24,14 @@ const Projects = props => {
         description="See how much YOU can save!!"
         techs={["Rails", "React", "Redux", "D3", "SVG", "Axios"]}
       />
-      <ProjectTileContainer
+      {/*<ProjectTileContainer
         title="Springfield BnB"
         imageUrl={Marge}
         pageUrl="http://www.springfield-bnb.aaronparisi.dev"
         gitUrl="https://github.com/aaronparisi/Springfield-BnB-Frontend.git"
         description="I hear the Springfield Power Plant is lovely this time of year."
         techs={["Rails", "React", "Redux", "Amazon S3 Storage", "Axios"]}
-      />
+      />*/}
       <ProjectTileContainer
         title="Candie's Swingin' 70th"
         imageUrl={Candie}
@@ -101,9 +100,9 @@ const Projects = props => {
         description="I finally understand how this game works"
         techs={["Ruby", "JavaScript"]}
       /> */}
-      
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
+
