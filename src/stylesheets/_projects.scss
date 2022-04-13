@@ -3,7 +3,7 @@
 .projects {
   background-color: $black;
   // height: 100vh;
-  
+
   padding-top: $nav-height;
 
   display: flex;
@@ -72,7 +72,7 @@
           background-color: $black;
           word-wrap: break-word;
           word-break: break-all;
-  
+
           &:focus {
             // border: none;
             box-shadow: none;
@@ -103,7 +103,6 @@
         visibility: visible;
       }
     }
-
 
     .project-tile {
       height: 100%;
@@ -145,10 +144,14 @@
 
       & .tile-links {
         width: 30%;
+        min-width: 200px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        align-items: flex-end;
+        align-items: center;
+
+        & .construction-icon {
+        }
 
         & a {
           display: flex;
@@ -163,3 +166,4 @@
     }
   }
 }
+
