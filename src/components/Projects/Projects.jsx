@@ -44,30 +44,6 @@ const Projects = (props) => {
         underConstruction={true}
       />
       <ProjectTileContainer
-        title="Candie's Swingin' 70th"
-        imageUrl={Candie}
-        pageUrl="http://www.candies-70th.aaronparisi.dev/1"
-        gitUrl="https://github.com/aaronparisi/candies-70th-frontend"
-        description="Happy birthday dear best-friend's-mommmmm 🎶"
-        techs={["React"]}
-      />
-      <ProjectTileContainer
-        title="Developer Portfolio 1.0"
-        imageUrl={Portfolio1}
-        pageUrl="http://www.v1.aaronparisi.dev"
-        gitUrl="https://github.com/aaronparisi/aarons-projects"
-        description="My first stab at my personal website"
-        techs={["React"]}
-      />
-      <ProjectTileContainer
-        title="Jeerkat Clock"
-        imageUrl={Jeerkat}
-        pageUrl="http://www.jeerkat-js.aaronparisi.dev"
-        gitUrl="https://github.com/aaronparisi/JS-Jeerkat-Clock"
-        description="Schedule your day with these vanilla JavaScript critters!"
-        techs={["JavaScript"]}
-      />
-      <ProjectTileContainer
         title="Todos"
         imageUrl={Todos}
         // pageUrl="https://aarons-todos.herokuapp.com/"
@@ -85,32 +61,6 @@ const Projects = (props) => {
         description="Is THIS why the birds are so angry??"
         techs={["Rails6", "React", "Redux", "PostgreSQL"]}
       />
-      <ProjectTileContainer
-        title="Towers of Hanoi"
-        imageUrl={Towers}
-        pageUrl="https://www.towers.aaronparisi.dev/"
-        // pageUrl="http://www.towers.aaronparisi.dev"
-        gitUrl="https://github.com/aaronparisi/Towers-of-Hanoi-jQuery"
-        description="Are you smarter than a boot-camper?  How about a recursive demo??"
-        techs={["jQuery"]}
-      />
-      <ProjectTileContainer
-        title="TicTacToe"
-        imageUrl={TicTacToe}
-        // pageUrl="https://tictactoe-32141.web.app/"
-        pageUrl="https://www.tictactoe.aaronparisi.dev"
-        gitUrl="https://github.com/aaronparisi/TicTacToe"
-        description="No cheating allowed (or possible)"
-        techs={["Ruby", "JavaScript"]}
-      />
-      {/* <ProjectTileContainer
-        title="Minesweeper"
-        imageUrl={Minesweeper}
-        pageUrl="https://www.minesweeper.aaronparisi.dev"
-        gitUrl="https://github.com/aaronparisi/Minesweeper"
-        description="I finally understand how this game works"
-        techs={["Ruby", "JavaScript"]}
-      /> */}
     </div>
   );
 };
