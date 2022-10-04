@@ -35,15 +35,6 @@ const Projects = (props) => {
         techs={["Rails", "React", "Redux", "D3", "SVG", "Axios"]}
       />
       <ProjectTileContainer
-        title="Springfield BnB"
-        imageUrl={Marge}
-        pageUrl="http://www.springfield-bnb.aaronparisi.dev"
-        gitUrl="https://github.com/aaronparisi/Springfield-BnB-Frontend.git"
-        description="I hear the Springfield Power Plant is lovely this time of year."
-        techs={["Rails", "React", "Redux", "Amazon S3 Storage", "Axios"]}
-        underConstruction={true}
-      />
-      <ProjectTileContainer
         title="Todos"
         imageUrl={Todos}
         // pageUrl="https://aarons-todos.herokuapp.com/"
